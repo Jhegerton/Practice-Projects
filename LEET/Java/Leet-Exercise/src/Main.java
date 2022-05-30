@@ -1,6 +1,10 @@
 public abstract class Main {
 
     public static void main(String[] args){
-        System.out.println("Hello World");
+        try {
+            TwoSome.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
