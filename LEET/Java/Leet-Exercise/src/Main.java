@@ -2,7 +2,7 @@ public abstract class Main {
 
     public static void main(String[] args){
         try {
-            AddTwoNumbers.run();
+            LongestSubstring.run();
         }catch(Exception e){
             e.printStackTrace();
         }
