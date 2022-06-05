@@ -1,43 +1,46 @@
+import java.io.IOException;
 import java.util.*;
 
 public class MedianOfArrays {
 
     public static void run(){
-        final Integer[] ARR1 = {1,2,3};
-        final Integer[] ARR2 = {2,3,4,5};
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter an array followed by commas");
+        Integer[] arr1 = getArray(scan.nextLine());
+        System.out.println("Enter another array");
+        Integer[] arr2 = getArray(scan.nextLine());
+
         List<Integer> list = new ArrayList<>();
-        list.addAll(Arrays.asList(ARR1));
-        list.addAll(Arrays.asList(ARR2));
+        list.addAll(Arrays.asList(arr1));
+        list.addAll(Arrays.asList(arr2));
         Collections.sort(list);
 
-//        for(Integer num : list){
-//            System.out.print(num + " ");
-//        }
+//        Tree tree = new Tree(list.get(0));
+//        list.remove(0);
+//        tree.insertAll(list);
+//        tree.printTree();
 
+        float median = 0;
 
-        Tree tree = new Tree(list.get(0));
-        list.remove(0);
-        tree.insertAll(list);
-        tree.printTree();
+        if(list.size() % 2 == 0){
+            median = ((float) list.get(list.size() / 2) + (float) list.get(list.size() / 2)) / 2;
+        }else {
+            median = (float) list.get((list.size() + 1) / 2);
+        }
+        System.out.println(median);
 
+   }
+   public static Integer[] getArray(String input){
+       String[] strArr = input.split(",");
+       Integer[] arr = new Integer[strArr.length];
 
+       for(int i = 0; i < strArr.length; i++){
+           arr[i] = Integer.parseInt(strArr[i]);
+       }
 
-//        float median = 0;
-//
-//        Integer evenFirst = (list.size() / 2 ) - 1;
-//        Integer evenLast = (list.size() / 2) + 1;
-//        Integer middle = (list.size() + 1) / 2;
-//        if(list.size() % 2 == 0){
-//            median = (float) (tree.traverseInOrder(root, evenFirst) + tree.traverseInOrder(root, evenLast)) / 2;
-//        }
-//        else{
-//            median = (float) (tree.traverseInOrder(root, middle));
-//        }
-
-//        System.out.println("The median is " + median + " [3]");
-
-
-
+       return arr;
    }
 
 }
@@ -53,6 +56,10 @@ class Tree{
         }
     }
     Node root;
+
+    Integer val = 1;
+    Integer result = 1;
+
     public Tree(Integer rootValue){
         super();
         root = new Node(rootValue);
@@ -91,12 +98,12 @@ class Tree{
     public Integer traverseInOrder(Node node, int n){
         if(node != null && n > 0){
             traverseInOrder(node.left, n - 1);
+            val = node.value;
             traverseInOrder(node.right, n - 1);
+            val = node.value;
         }
-        else{
-            return node.value;
-        }
-        return null;
+
+        return val;
     }
     public void displayTree(Node node){
         if(node != null){
@@ -110,6 +117,10 @@ class Tree{
     }
     void insert(Integer num){
         insertVal(root, num);
+    }
+    Integer search(int n){
+        val = result = root.value;
+        return traverseInOrder(root, n);
     }
 
 }
