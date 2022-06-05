@@ -2,7 +2,7 @@ public abstract class Main {
 
     public static void main(String[] args){
         try {
-            LongestSubstring.run();
+            MedianOfArrays.run();
         }catch(Exception e){
             e.printStackTrace();
         }
