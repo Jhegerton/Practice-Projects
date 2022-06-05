@@ -10,25 +10,31 @@ public class MedianOfArrays {
         list.addAll(Arrays.asList(ARR2));
         Collections.sort(list);
 
-        for(Integer num : list){
-            System.out.print(num + " ");
-        }
+//        for(Integer num : list){
+//            System.out.print(num + " ");
+//        }
 
 
-        Tree tree = Tree.insertAll(list);
-        float median = 0;
-        Tree.Node root = new Tree.Node(list.get(0));
-        Integer evenFirst = (list.size() / 2 ) - 1;
-        Integer evenLast = (list.size() / 2) + 1;
-        Integer middle = (list.size() + 1) / 2;
-        if(list.size() % 2 == 0){
-            median = (float) (tree.traverseInOrder(root, evenFirst) + tree.traverseInOrder(root, evenLast)) / 2;
-        }
-        else{
-            median = (float) (tree.traverseInOrder(root, middle));
-        }
+        Tree tree = new Tree(list.get(0));
+        list.remove(0);
+        tree.insertAll(list);
+        tree.printTree();
 
-        System.out.println("The median is " + median + " [3]");
+
+
+//        float median = 0;
+//
+//        Integer evenFirst = (list.size() / 2 ) - 1;
+//        Integer evenLast = (list.size() / 2) + 1;
+//        Integer middle = (list.size() + 1) / 2;
+//        if(list.size() % 2 == 0){
+//            median = (float) (tree.traverseInOrder(root, evenFirst) + tree.traverseInOrder(root, evenLast)) / 2;
+//        }
+//        else{
+//            median = (float) (tree.traverseInOrder(root, middle));
+//        }
+
+//        System.out.println("The median is " + median + " [3]");
 
 
 
@@ -46,10 +52,17 @@ class Tree{
 
         }
     }
-    public void insert(Node node, int value){
+    Node root;
+    public Tree(Integer rootValue){
+        super();
+        root = new Node(rootValue);
+    }
+
+    public void insertVal(Node node, int value){
+
         if(value < node.value){
             if(node.left != null){
-                insert(node.left, value);
+                insertVal(node.left, value);
 
             }
             else{
@@ -58,21 +71,22 @@ class Tree{
         }
         else if (value > node.value){
             if(node.right != null) {
-                insert(node.right, value);
+                insertVal(node.right, value);
+
+            } else{
+                node.right = new Node(value);
+
             }
         }
         else{
-            node.right = new Node(value);
+            node.left = new Node(value);
+        }
 
-        }
     }
-    public static Tree insertAll(List<Integer> list){
-        Tree tree = new Tree();
-        Node root = new Node(list.get(0));
+    public void insertAll(List<Integer> list){
         for(Integer num : list){
-            tree.insert(root, num);
+            this.insert(num);
         }
-        return tree;
     }
     public Integer traverseInOrder(Node node, int n){
         if(node != null && n > 0){
@@ -84,6 +98,20 @@ class Tree{
         }
         return null;
     }
+    public void displayTree(Node node){
+        if(node != null){
+            displayTree(node.left);
+            System.out.print(node.value + " ");
+            displayTree(node.right);
+        }
+    }
+    void printTree() {
+        displayTree(root);
+    }
+    void insert(Integer num){
+        insertVal(root, num);
+    }
+
 }
 
 
