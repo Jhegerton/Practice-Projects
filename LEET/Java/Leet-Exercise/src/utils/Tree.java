@@ -1,12 +1,12 @@
-package Utils;
+package utils;
 
 import java.util.Collection;
-import java.util.LinkedList;
 
 public class Tree{
         static class Node{
             int value;
-            Node left, right;
+            Node left;
+            Node right;
             Node(int value){
                 this.value = value;
                 left = null;

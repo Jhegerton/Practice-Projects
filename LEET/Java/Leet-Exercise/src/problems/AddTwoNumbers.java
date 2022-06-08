@@ -1,6 +1,6 @@
-package Problems;
+package problems;
 
-import Utils.M;
+import utils.M;
 
 import java.util.*;
 
@@ -9,6 +9,8 @@ public class AddTwoNumbers {
     static LinkedList<Integer> ll;
     static Scanner input;
 
+    private AddTwoNumbers(){}
+
     public static void run(){
         M.pl("Enter an integer");
         Integer num1 = Integer.parseInt(input.nextLine());
@@ -16,7 +18,6 @@ public class AddTwoNumbers {
         Integer num2 = Integer.parseInt(input.nextLine());
 
         ll = new LinkedList<>();
-        Integer start = 0;
         LinkedList<Integer> ll0 = new LinkedList<>(construct(num1, ll));
         ll.clear();
         LinkedList<Integer> ll1 = new LinkedList<>(construct(num2, ll));
@@ -35,9 +36,6 @@ public class AddTwoNumbers {
     public static void test(){
         LinkedList<Integer> ll2 = new LinkedList<>();
         Integer start = 0;
-//        for(Integer num : construct(255, ll2)){
-//            System.out.print(num + " ");
-//        }
         M.pl(deconstruct(construct(255, ll2), start));
     }
     private static LinkedList<Integer> construct(Integer num, LinkedList<Integer> linkedList){

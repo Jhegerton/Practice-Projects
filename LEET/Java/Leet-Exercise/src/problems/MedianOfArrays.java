@@ -1,10 +1,11 @@
-package Problems;
+package problems;
 
-import Utils.M;
+import utils.M;
 import java.util.*;
 
 public class MedianOfArrays {
 
+    private MedianOfArrays(){}
     public static void run(){
 
         Scanner scan = new Scanner(System.in);

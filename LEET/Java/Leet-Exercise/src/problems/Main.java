@@ -1,4 +1,4 @@
-package Problems;
+package problems;
 
 public abstract class Main {
 

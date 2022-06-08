@@ -1,18 +1,21 @@
-package Problems;
+package problems;
 
-import Utils.M;
+import utils.M;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
 import java.util.Vector;
 
 public class LongestSubstring {
+
+    private LongestSubstring(){}
     public static void run() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder build = new StringBuilder();
-        Vector<Character> charVec = new Vector<>();
-        Vector<String> stringVec = new Vector<>();
+        LinkedList<Character> chars = new LinkedList<>();
+        LinkedList<String> strings = new LinkedList<>();
         int count = 0;
         String dummy = "";
 
@@ -22,16 +25,16 @@ public class LongestSubstring {
         char[] arr = input.toCharArray();
 
         for(char c : arr){
-            if (charVec.contains(c)) {
-                stringVec.add(build.toString());
-                charVec.clear();
+            if (chars.contains(c)) {
+                strings.add(build.toString());
+                chars.clear();
                 build = new StringBuilder();
             }
             build.append(c);
-            charVec.add(c);
+            chars.add(c);
         }
 
-        for(String substring : stringVec){
+        for(String substring : strings){
             if(count < substring.length()){
                 dummy = substring;
                 count = substring.length();
