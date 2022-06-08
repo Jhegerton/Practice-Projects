@@ -1,3 +1,7 @@
+package Problems;
+
+import Utils.M;
+
 import java.util.*;
 import java.time.*;
 
@@ -7,12 +11,12 @@ public class TwoSome {
 
     public static void execute() throws Exception{
         input = new Scanner(System.in);
-        System.out.println("Enter a limit greater than 0.");
+        M.pl("Enter a limit greater than 0.");
         Integer limit = Integer.parseInt(input.nextLine());
         if(limit < 0){
             throw new Exception("Limit out of bounds");
         }
-        System.out.println("Enter a value between 0 and " + limit);
+        M.pl("Enter a value between 0 and " + limit);
         Integer val = Integer.parseInt(input.nextLine());
         if(val > limit || val < 0){
             throw new Exception("Value out of bounds.");
@@ -28,7 +32,7 @@ public class TwoSome {
             for(int j = 0; j < arr2.length; j++){
                 if(!map.containsKey(arr1[i])) {
                     if (arr1[i] + arr2[j] == val) {
-                        System.out.println("[" + i + "][" + j + "]" + " (" + arr1[i] + " + " + arr2[j] + ")");
+                        M.pl("[" + i + "][" + j + "]" + " (" + arr1[i] + " + " + arr2[j] + ")");
                         map.put(arr1[i], arr2[j]);
                     }
                 }

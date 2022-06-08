@@ -1,3 +1,7 @@
+package Problems;
+
+import Utils.M;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +16,7 @@ public class LongestSubstring {
         int count = 0;
         String dummy = "";
 
-        System.out.println("Enter a string");
+        M.pl("Enter a string");
         String input = reader.readLine();
 
         char[] arr = input.toCharArray();
@@ -34,7 +38,7 @@ public class LongestSubstring {
             }
         }
 
-        System.out.println("The longest substring is: " + dummy + ", with the length of " + count);
+        M.pl("The longest substring is: " + dummy + ", with the length of " + count);
 
 
 

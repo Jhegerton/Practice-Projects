@@ -1,3 +1,7 @@
+package Problems;
+
+import Utils.M;
+
 import java.util.*;
 
 public class AddTwoNumbers {
@@ -6,10 +10,9 @@ public class AddTwoNumbers {
     static Scanner input;
 
     public static void run(){
-        input = new Scanner(System.in);
-        System.out.println("Enter an integer");
+        M.pl("Enter an integer");
         Integer num1 = Integer.parseInt(input.nextLine());
-        System.out.println("Enter a second integer");
+        M.pl("Enter a second integer");
         Integer num2 = Integer.parseInt(input.nextLine());
 
         ll = new LinkedList<>();
@@ -18,13 +21,13 @@ public class AddTwoNumbers {
         ll.clear();
         LinkedList<Integer> ll1 = new LinkedList<>(construct(num2, ll));
 
-        System.out.println(num1);
+        M.pl(num1);
         print(ll0);
-        System.out.println();
-        System.out.println(num2);
+        M.pl();
+        M.pl(num2);
         print(ll1);
-        System.out.println();
-        System.out.println(num1 + num2);
+        M.pl();
+        M.pl(num1 + num2);
         print(sum(ll0, ll1));
 
 
@@ -35,7 +38,7 @@ public class AddTwoNumbers {
 //        for(Integer num : construct(255, ll2)){
 //            System.out.print(num + " ");
 //        }
-        System.out.println(deconstruct(construct(255, ll2), start));
+        M.pl(deconstruct(construct(255, ll2), start));
     }
     private static LinkedList<Integer> construct(Integer num, LinkedList<Integer> linkedList){
        if(num.equals(0)){
@@ -58,7 +61,7 @@ public class AddTwoNumbers {
     }
     private static void print(LinkedList<Integer> lln){
         for(Integer num : lln) {
-            System.out.print(num + " <- ");
+            M.p(num + " <- ");
         }
     }
 }
