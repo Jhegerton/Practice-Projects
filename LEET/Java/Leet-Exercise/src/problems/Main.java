@@ -1,6 +1,5 @@
 package problems;
-
-public abstract class Main {
+public interface Main {
 
     public static void main(String[] args){
         try {
