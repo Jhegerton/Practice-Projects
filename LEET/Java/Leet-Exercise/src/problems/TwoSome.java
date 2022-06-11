@@ -46,10 +46,9 @@ public class TwoSome {
 
     private static Integer[] generateArray(int size) throws Exception {
         Integer[] arr = new Integer[size];
-        Rand rand = new Rand();
 
         for(int i = 0; i < size; i++){
-            arr[i] = rand.gen().nextInt(Integer.MAX_VALUE) % size;
+            arr[i] = Rand.gen().nextInt(Integer.MAX_VALUE) % size;
         }
         return arr;
     }
