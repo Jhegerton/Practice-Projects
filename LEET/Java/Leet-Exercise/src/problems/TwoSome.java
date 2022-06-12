@@ -48,7 +48,7 @@ public class TwoSome {
         Integer[] arr = new Integer[size];
 
         for(int i = 0; i < size; i++){
-            arr[i] = Rand.gen().nextInt(Integer.MAX_VALUE) % size;
+            arr[i] = (Integer) Rand.gen('i') % size;
         }
         return arr;
     }

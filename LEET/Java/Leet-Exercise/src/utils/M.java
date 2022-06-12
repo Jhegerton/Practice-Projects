@@ -15,12 +15,19 @@ public class M {
         System.out.println();
     }
 
+    public static void err(Object obj) {System.err.println(obj);}
+
     public static Character[] convertArr(char[] arr){
         Character[] array = new Character[arr.length];
         for(int i = 0; i < arr.length; i++){
             array[i] = arr[i];
         }
         return array;
+    }
+    public static void printArr(Object[] arr){
+        for(Object obj : arr){
+            pl(obj);
+        }
     }
     public static boolean identical(Object obj1, Object obj2){
         return obj1.equals(obj2);
