@@ -9,29 +9,16 @@ public class Algorithms {
     static Scanner input = new Scanner(System.in);
     static List<String> choices = new ArrayList<>();
     static Random rand = new Random();
-
     static Clock time = Clock.systemUTC();
 
     private Algorithms(){}
 
-    public static void pickOne(){
-        rand.setSeed(time.millis());
-        System.out.println("Enter your choices");
-        boolean check = false;
-        final BigInteger PRIME = BigInteger.probablePrime(12, rand);
-        String next = "";
-        System.out.println(PRIME);
-        while(!check){
-            next = input.nextLine();
-            if(next.length() != 0) {
-                choices.add(next);
-            }
-            else{
-                check = true;
-            }
+    public static void pickOne(String[] args){
 
-        }
-         int count = choices.size();
+        rand.setSeed(time.millis());
+        final BigInteger PRIME = BigInteger.probablePrime(12, rand);
+
+         int count = args.length;
 
          Map<Integer, Double> results = new HashMap<>();
          double total = 0.0;
@@ -58,9 +45,9 @@ public class Algorithms {
 
         for(Map.Entry<Integer, Double> entry : results.entrySet()){
             Integer key = entry.getKey();
-            System.out.println(choices.get(key) + " with " + Math.round(results.get(key)) + " votes (" + Math.round(results.get(key) / PRIME.doubleValue() * 100) + "%)");
+            System.out.println(args[key] + " with " + Math.round(results.get(key)) + " votes (" + Math.round(results.get(key) / PRIME.doubleValue() * 100) + "%)");
         }
-        System.out.println(choices.get(winner));
+        System.out.println(args[winner]);
 
     }
 
