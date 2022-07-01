@@ -1,0 +1,15 @@
+# ninja log v5
+0	100	6784116969193302	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+103	331	6784116971386582	Misc_C_Projects.exe	c39d85b1398e7c84
+1	74	6784122493310251	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+74	239	6784122494953742	Misc_C_Projects.exe	c39d85b1398e7c84
+2	75	6784124952915694	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+76	254	6784124954690001	Misc_C_Projects.exe	c39d85b1398e7c84
+2	75	6784125628870505	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+75	252	6784125630524486	Misc_C_Projects.exe	c39d85b1398e7c84
+2	74	6784125941286531	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+76	227	6784125942811776	Misc_C_Projects.exe	c39d85b1398e7c84
+2	64	6784126043141291	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+65	219	6784126044653861	Misc_C_Projects.exe	c39d85b1398e7c84
+2	68	6784127781678803	CMakeFiles/Misc_C_Projects.dir/main.c.obj	6fa9a7d98bc6e709
+68	219	6784127783227569	Misc_C_Projects.exe	c39d85b1398e7c84
