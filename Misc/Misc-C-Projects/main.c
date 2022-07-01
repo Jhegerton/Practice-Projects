@@ -2,9 +2,14 @@
 
 
 int main() {
-    char greeting[] = "Hello World";
-    for(int i = 0; i < 5; i++){
-        printf("%s , %u \n",greeting, i);
-    }
+    char entry[2][10];
+
+    printf("%s\n", "Enter a choice");
+    scanf("%s", entry[0]);
+    printf("%s\n", "Enter a choice");
+    scanf("%s", entry[1]);
+    printf("%s\n", entry[0]);
+    printf("%s\n", entry[1]);
+
     return 0;
 }
