@@ -13,7 +13,7 @@ int main() {
     srand((int) time(0));
     map<int, double> results;
     string choice;
-    cout << "Enter your choices" << endl;
+    printf("%s\n", "Enter your choices");
     do {
         getline(cin, choice);
         if (choice.length() != 0) {
@@ -44,7 +44,9 @@ int main() {
     }
 
     for(auto const& values : results){
-        cout << vec[values.first] << " with " << values.second << " votes (" << values.second / total * 100 << "%)" <<  endl;
+        string string_obj(vec[values.first]);
+        char* name = &string_obj[0];
+        printf("%s with %.0f votes (%.2f%%)\n", name , values.second, values.second / total * 100);
     }
     cout << vec[winner] << endl;
     return 0;
