@@ -1,7 +1,6 @@
-#include <iostream>
 #include <map>
 #include <random>
-#include <string.h>
+#include <cstring>
 
 int nextPrime(int first);
 void arrayCopy(char** src, char** dest, int start, int finish);
@@ -69,11 +68,8 @@ int main(int argc, char *argv[]) {
 int nextPrime(int first){
     bool check;
     int temp;
-    if(first > 10000){
-        return 1117;
-    }
     for(int i = first; i < first + 1000; i++){
-       for(int j = 2; j < i; j++){
+       for(int j = 2; j < (i/2); j++){
            if(i % j != 0){
                temp = i;
                check = true;
