@@ -76,6 +76,42 @@ build Misc_Cpp_Projects.exe: CXX_EXECUTABLE_LINKER__Misc_Cpp_Projects_Debug CMak
   TARGET_IMPLIB = libMisc_Cpp_Projects.dll.a
   TARGET_PDB = Misc_Cpp_Projects.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target choose
+
+
+#############################################
+# Order-only phony target for choose
+
+build cmake_object_order_depends_target_choose: phony || CMakeFiles/choose.dir
+
+build CMakeFiles/choose.dir/main.cpp.obj: CXX_COMPILER__choose_Debug C$:/Git/personal-practice/Misc/Misc-Cpp-Projects/main.cpp || cmake_object_order_depends_target_choose
+  DEP_FILE = CMakeFiles\choose.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\choose.dir
+  OBJECT_FILE_DIR = CMakeFiles\choose.dir
+  TARGET_COMPILE_PDB = CMakeFiles\choose.dir\
+  TARGET_PDB = choose.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target choose
+
+
+#############################################
+# Link the executable choose.exe
+
+build choose.exe: CXX_EXECUTABLE_LINKER__choose_Debug CMakeFiles/choose.dir/main.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\choose.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\choose.dir\
+  TARGET_FILE = choose.exe
+  TARGET_IMPLIB = libchoose.dll.a
+  TARGET_PDB = choose.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -104,6 +140,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Misc_Cpp_Projects: phony Misc_Cpp_Projects.exe
 
+build choose: phony choose.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -112,7 +150,7 @@ build Misc_Cpp_Projects: phony Misc_Cpp_Projects.exe
 #############################################
 # Folder: C:/Git/personal-practice/Misc/Misc-Cpp-Projects/cmake-build-debug
 
-build all: phony Misc_Cpp_Projects.exe
+build all: phony Misc_Cpp_Projects.exe choose.exe
 
 # =============================================================================
 # Built-in targets
