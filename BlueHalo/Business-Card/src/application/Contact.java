@@ -17,6 +17,7 @@ public class Contact implements ContactInfo{
     }
 
     public void setPhoneNumber(String phoneNumber){
+        phoneNumber = phoneNumber.replaceAll("\\D", "");
         this.phoneNumber = phoneNumber;
     }
 
@@ -39,5 +40,8 @@ public class Contact implements ContactInfo{
         return this.emailAddress;
     }
 
-
+    @Override
+    public String toString() {
+        return "Name : " + this.name + "\nPhone: " + this.phoneNumber + "\nEmail: " + this.emailAddress;
+    }
 }

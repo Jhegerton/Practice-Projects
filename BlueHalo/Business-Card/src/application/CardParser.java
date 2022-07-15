@@ -1,5 +1,7 @@
 package application;
 
+import java.util.regex.*;
+
 public class CardParser implements BusinessCardParser{
 
     private Contact contact;
@@ -10,8 +12,31 @@ public class CardParser implements BusinessCardParser{
     }
 
     @Override
-    public ContactInfo getContactInfo(String document) {
-        System.out.print(document);
-        return null;
+    public ContactInfo getContactInfo(String document) throws CardException {
+        String[] lines = document.split("&");
+        Pattern isEmail  = Pattern.compile(Regex.IS_EMAIL.getRegex());
+        Pattern isPhone = Pattern.compile(Regex.IS_PHONE.getRegex());
+        Pattern isName = Pattern.compile(Regex.IS_NAME.getRegex());
+
+        for(String line : lines){
+            Matcher emailMatcher = isEmail.matcher(line);
+            Matcher phoneMatcher = isPhone.matcher(line);
+            Matcher nameMatcher = isName.matcher(line);
+
+            if(emailMatcher.find()){
+                this.contact.setEmailAddress(line);
+
+            }
+            if(phoneMatcher.find()){
+                this.contact.setPhoneNumber(line);
+
+            }
+            if(nameMatcher.find()){
+                this.contact.setName(line);
+
+            }
+        }
+
+        return this.contact;
     }
 }
