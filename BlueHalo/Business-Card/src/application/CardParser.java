@@ -1,6 +1,9 @@
 package application;
 
+import java.io.IOException;
 import java.util.regex.*;
+
+import static application.Census.checkNames;
 
 public class CardParser implements BusinessCardParser{
 
@@ -12,7 +15,7 @@ public class CardParser implements BusinessCardParser{
     }
 
     @Override
-    public ContactInfo getContactInfo(String document) throws CardException {
+    public ContactInfo getContactInfo(String document) throws Exception {
         String[] lines = document.split("&");
         Pattern isEmail  = Pattern.compile(Regex.IS_EMAIL.getRegex());
         Pattern isPhone = Pattern.compile(Regex.IS_PHONE.getRegex());
@@ -32,11 +35,16 @@ public class CardParser implements BusinessCardParser{
 
             }
             if(nameMatcher.find()){
-                this.contact.setName(line);
-
+                if(surname(line)) {
+                    this.contact.setName(line);
+                }
             }
         }
 
         return this.contact;
+    }
+    private boolean surname(String fullName) throws Exception {
+        String[] names = fullName.split(" ");
+        return checkNames(names[names.length-1]);
     }
 }
