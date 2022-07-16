@@ -1,13 +1,12 @@
 package application;
 
-import java.io.IOException;
 import java.util.regex.*;
 
 import static application.Census.checkNames;
 
 public class CardParser implements BusinessCardParser{
 
-    private Contact contact;
+    private final Contact contact;
 
     public CardParser(){
         super();
@@ -15,13 +14,15 @@ public class CardParser implements BusinessCardParser{
     }
 
     @Override
-    public ContactInfo getContactInfo(String document) throws Exception {
+    public ContactInfo getContactInfo(String document) throws CardException {
         String[] lines = document.split("&");
+
         Pattern isEmail  = Pattern.compile(Regex.IS_EMAIL.getRegex());
         Pattern isPhone = Pattern.compile(Regex.IS_PHONE.getRegex());
         Pattern isName = Pattern.compile(Regex.IS_NAME.getRegex());
 
         for(String line : lines){
+
             Matcher emailMatcher = isEmail.matcher(line);
             Matcher phoneMatcher = isPhone.matcher(line);
             Matcher nameMatcher = isName.matcher(line);
@@ -34,16 +35,14 @@ public class CardParser implements BusinessCardParser{
                 this.contact.setPhoneNumber(line);
 
             }
-            if(nameMatcher.find()){
-                if(surname(line)) {
-                    this.contact.setName(line);
-                }
+            if(nameMatcher.find() && surname(line)){
+                this.contact.setName(line);
             }
         }
 
         return this.contact;
     }
-    private boolean surname(String fullName) throws Exception {
+    private boolean surname(String fullName) {
         String[] names = fullName.split(" ");
         return checkNames(names[names.length-1]);
     }

@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "8e2d7ea9-9295-40bb-8559-8a354daf7aa8",
+		"name": "Card Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22003385"
+	},
+	"item": [
+		{
+			"name": "2020_Census_API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Has status code 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response has body\", function(){\r",
+							"    pm.response.to.have.body;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Response has proper data\", function(){\r",
+							"    const data = pm.response.json();\r",
+							"    pm.expect(data[0][0]).to.equal(\"NAME\");\r",
+							"    pm.expect(data[0][1]).to.equal(\"RANK\");\r",
+							"    console.log(data);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.census.gov/data/2010/surname?get=NAME&RANK=1:500",
+					"protocol": "https",
+					"host": [
+						"api",
+						"census",
+						"gov"
+					],
+					"path": [
+						"data",
+						"2010",
+						"surname"
+					],
+					"query": [
+						{
+							"key": "get",
+							"value": "NAME"
+						},
+						{
+							"key": "RANK",
+							"value": "1:500"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "key",
+			"value": "737ace45af93fdd6cd41433d1d8fa2510ab8e726"
+		}
+	]
+}

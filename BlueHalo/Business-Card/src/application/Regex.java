@@ -13,7 +13,7 @@ public enum Regex {
                 return "^[^fF].*[+]?[ ]?[0-9]*[ ]?[-]?[ ]?[(]?[0-9]{3}[)]?[ ]?[-]?[ ]?[0-9a-zA-Z]{3}[ ]?[-]?[ ]?[0-9a-zA-Z]{4}$";
             }
             case IS_NAME -> {
-                return "^(Name)?[:]?.?([A-Z][a-z]*[ ]?){2,}";
+                return "^(Name)?[:]?.?([A-Z][a-z]*[ ]?){2,}$";
             }
             default -> {
                 throw new CardException("Regex is not selected");

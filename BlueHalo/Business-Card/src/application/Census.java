@@ -32,10 +32,15 @@ public class Census {
 
 
     }
-    public static boolean checkNames(String name) throws Exception {
-         return getNames()
-                .anyMatch(set -> set.contains(name.toUpperCase()));
-
+    public static boolean checkNames(String name) {
+        try {
+            return getNames()
+                    .anyMatch(set -> set.contains(name.toUpperCase()));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
 }
