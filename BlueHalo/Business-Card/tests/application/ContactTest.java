@@ -20,6 +20,12 @@ class ContactTest {
 
     @AfterEach
     void tearDown() {
+        defaultContact = null;
+        alternateContact = null;
+        copyContract = null;
+        assertNull(defaultContact);
+        assertNull(alternateContact);
+        assertNull(copyContract);
     }
 
     @Test

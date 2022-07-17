@@ -9,7 +9,7 @@ public class Input {
     private Input(){
         super();
     }
-    public static void getInput(String arg) throws Exception {
+    public static Contact getInput(String arg) throws Exception {
         Path path = Path.of(arg);
         File file = new File(path.toString());
         StringBuilder build = new StringBuilder();
@@ -19,6 +19,9 @@ public class Input {
             }
         }
         CardParser parser = new CardParser();
-        System.out.print(parser.getContactInfo(build.toString()));
+        Contact contact = parser.getContactInfo(build.toString());
+        System.out.println(contact);
+
+        return contact;
     }
 }

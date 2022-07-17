@@ -4,19 +4,41 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.management.InvalidApplicationException;
+
+import static application.Input.getInput;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InputTest {
+    String path;
 
     @BeforeEach
     void setUp() {
+        path = "arthur.txt";
     }
 
     @AfterEach
     void tearDown() {
+        path = null;
+        assertNull(path);
     }
 
     @Test
-    void getInput() {
+    void testGetInput1() {
+        try {
+            assertEquals("Contact", getInput(path).getClass().getSimpleName());
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    @Test
+    void testgetInput2(){
+        Exception e = assertThrows(Exception.class, () ->{
+            getInput("~");
+        });
+        assertEquals("~ (The system cannot find the file specified)", e.getMessage());
+
     }
 }

@@ -23,7 +23,7 @@ public class CardParser implements BusinessCardParser{
     }
 
     @Override
-    public ContactInfo getContactInfo(String document) throws CardException {
+    public Contact getContactInfo(String document) throws CardException {
         String[] lines = document.split("&");
 
         Pattern isEmail  = Pattern.compile(Regex.IS_EMAIL.getRegex());

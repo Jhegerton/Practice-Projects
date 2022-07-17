@@ -8,7 +8,7 @@ public abstract class Main {
                 throw new CardException("This program takes only one argument");
             }
             else{
-                Input.getInput(args[0]);
+                System.out.println(Input.getInput(args[0]));
             }
         }
         catch(Exception e){
