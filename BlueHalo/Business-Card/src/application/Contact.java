@@ -12,6 +12,26 @@ public class Contact implements ContactInfo{
         phoneNumber = "";
         emailAddress = "";
     }
+    @Override
+    public boolean equals(Contact cont){
+        return this.name.equals(cont.name) &&
+               this.phoneNumber.equals(cont.phoneNumber) &&
+               this.emailAddress.equals(cont.emailAddress);
+    }
+    @Override
+    public int hashCode(){
+        int hash = 11;
+        if(name != null){
+            hash = 41 * hash + name.hashCode();
+        }
+        if(phoneNumber != null){
+            hash = 41 * hash + phoneNumber.hashCode();
+        }
+        if(emailAddress != null){
+            hash = 41 * hash + emailAddress.hashCode();
+        }
+        return hash;
+    }
     public void setName(String name){
         this.name = name;
     }
