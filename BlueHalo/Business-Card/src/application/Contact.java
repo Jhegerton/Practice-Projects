@@ -12,6 +12,17 @@ public class Contact implements ContactInfo{
         phoneNumber = "";
         emailAddress = "";
     }
+    public Contact(String name, String phoneNumber, String emailAddress){
+        super();
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
+    }
+    public Contact(Contact contact){
+        this.name = contact.name;
+        this.phoneNumber = contact.phoneNumber;
+        this.emailAddress = contact.emailAddress;
+    }
     @Override
     public boolean equals(Contact cont){
         return this.name.equals(cont.name) &&

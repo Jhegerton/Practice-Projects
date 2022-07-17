@@ -12,6 +12,15 @@ public class CardParser implements BusinessCardParser{
         super();
         this.contact = new Contact();
     }
+    public CardParser(Contact contact){
+        super();
+        this.contact = new Contact(contact);
+    }
+
+    public CardParser(CardParser parser){
+        super();
+        this.contact = new Contact(parser.contact);
+    }
 
     @Override
     public ContactInfo getContactInfo(String document) throws CardException {

@@ -1,5 +1,0 @@
-
-f
-java:S1206"PThis class overrides "hashCode()" and should therefore also override "equals()".(ğÜşŠ
-p
-java:S1201"UEither override Object.equals(Object), or rename the method to prevent any confusion.(’ƒŒÄøÿÿÿÿ
