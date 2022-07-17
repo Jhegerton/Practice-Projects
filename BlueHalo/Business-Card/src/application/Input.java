@@ -35,7 +35,6 @@ public class Input {
         }
         CardParser parser = new CardParser();
         Contact contact = parser.getContactInfo(build.toString());
-        System.out.println(contact);
 
         return contact;
     }

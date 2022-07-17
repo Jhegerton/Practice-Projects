@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Business-Card:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Business_Card_jar</output-path>
+    <root id="archive" name="Business-Card.jar">
+      <element id="module-output" name="Business-Card" />
+    </root>
+  </artifact>
+</component>
