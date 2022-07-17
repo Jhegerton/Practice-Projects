@@ -4,8 +4,14 @@ import java.io.*;
 import java.nio.file.Path;
 import java.util.Scanner;
 
-public class Input {
+/**
+ * Input class for processing input from the command line
+ */
 
+public class Input {
+    /**
+     * private default constructor
+     */
     private Input(){
         super();
     }

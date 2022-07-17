@@ -1,5 +1,8 @@
 package application;
 
+/**
+ * Regex enum for defining and storing regular expressions
+ */
 public enum Regex {
 
     IS_EMAIL, IS_PHONE, IS_NAME;

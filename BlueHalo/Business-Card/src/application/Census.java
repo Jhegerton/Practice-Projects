@@ -9,8 +9,15 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.stream.Stream;
 
+/**
+ * Class for accessing name data from US Census API
+ */
+
 public class Census {
 
+    /**
+     * private default constructor
+     */
     private Census(){
         super();
     }

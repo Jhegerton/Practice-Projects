@@ -4,6 +4,10 @@ import java.util.regex.*;
 
 import static application.Census.checkNames;
 
+/**
+ * Card Parser class for processing card data
+ */
+
 public class CardParser implements BusinessCardParser{
 
     private final Contact contact;

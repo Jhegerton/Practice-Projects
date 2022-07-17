@@ -1,5 +1,9 @@
 package application;
 
+/**
+ * Class for defining and storing contact info
+ */
+
 public class Contact implements ContactInfo{
 
     private String name;
