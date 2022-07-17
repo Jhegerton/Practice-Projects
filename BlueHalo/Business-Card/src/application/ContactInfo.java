@@ -1,5 +1,8 @@
 package application;
 
+/**
+ * Interface for Contact class
+ */
 public interface ContactInfo {
     boolean equals(Contact cont); // Evaluates if contact objects are equal.
 

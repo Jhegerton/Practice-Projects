@@ -4,6 +4,11 @@ public enum Regex {
 
     IS_EMAIL, IS_PHONE, IS_NAME;
 
+    /**
+     * This method will return the corresponding regular expression for matching the different attributes.
+     * @return String
+     * @throws CardException
+     */
     public String getRegex() throws CardException {
         switch(this){
             case IS_EMAIL -> {

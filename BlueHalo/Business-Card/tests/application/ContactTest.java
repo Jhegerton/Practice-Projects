@@ -28,6 +28,8 @@ class ContactTest {
         assertNull(copyContract);
     }
 
+    // Tests the boilerplate methods for the Contact class for
+    // correct behavior.
     @Test
     void testEquals() {
         assertFalse(defaultContact.equals(copyContract));

@@ -1,6 +1,17 @@
 package application;
 
 public abstract class Main {
+    /**
+     * Main class and method
+     * <p>
+     *     The main method recieves the ocr data as a text file. To use add the url to the
+     *     text file as a command line argument and it will pull the information from that
+     *     location. The program will only run with one argument, being the location.
+     * </p>
+     * @author Harrison Egerton
+     * <em>July 17th, 2022</em>
+     * @param args
+     */
 
     public static void main(String[] args){
         try {
@@ -12,7 +23,8 @@ public abstract class Main {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
+            System.err.println(e);
+            System.exit(1);
         }
     }
 }

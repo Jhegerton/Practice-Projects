@@ -8,20 +8,43 @@ public class CardParser implements BusinessCardParser{
 
     private final Contact contact;
 
+    /**
+     * Default Constructor
+     */
     public CardParser(){
         super();
         this.contact = new Contact();
     }
+
+    /**
+     * Alternate Contructor
+     * @param contact
+     */
     public CardParser(Contact contact){
         super();
         this.contact = new Contact(contact);
     }
 
+    /**
+     * Copy Constructor
+     * @param parser
+     */
     public CardParser(CardParser parser){
         super();
         this.contact = new Contact(parser.contact);
     }
 
+    /**
+     * This is the primary method for extracting the information from
+     * the data. Data is verified line by line using regular expressions.
+     * Regular expressions are defined in the Regex Enumeration class.
+     * See {@link Regex#getRegex() GetRegex}.
+     *
+     * The name is verified separately. See {@link #surname(String) Surname}
+     * @param document
+     * @return Contact
+     * @throws CardException
+     */
     @Override
     public Contact getContactInfo(String document) throws CardException {
         String[] lines = document.split("&");
@@ -51,6 +74,13 @@ public class CardParser implements BusinessCardParser{
 
         return this.contact;
     }
+
+    /**
+     * Name is verified as well by checking the possible last name.
+     * See {@link Census#checkNames(String) CheckNames}
+     * @param fullName
+     * @return boolean
+     */
     private boolean surname(String fullName) {
         String[] names = fullName.split(" ");
         return checkNames(names[names.length-1]);

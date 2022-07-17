@@ -23,6 +23,8 @@ class CensusTest {
         rareName = null;
     }
 
+    // Verifies that the check is dependent on the API. The api is returning the 500 most common names. The common name
+    // should be present but the rare name should not. This was done in the interest of memory and time.
     @Test
     void testCheckNames() {
         assertTrue(checkNames(commonName));

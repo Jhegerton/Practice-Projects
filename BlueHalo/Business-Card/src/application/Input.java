@@ -9,6 +9,15 @@ public class Input {
     private Input(){
         super();
     }
+
+    /**
+     * This method takes the input from the ocr text from a text file
+     * and coverts it to a string with a new line delimiter. The data is
+     * then passed to the card data parser.
+     * @param arg
+     * @return Contact
+     * @throws Exception
+     */
     public static Contact getInput(String arg) throws Exception {
         Path path = Path.of(arg);
         File file = new File(path.toString());

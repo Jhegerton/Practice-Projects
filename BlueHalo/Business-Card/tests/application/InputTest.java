@@ -23,6 +23,7 @@ class InputTest {
         assertNull(path);
     }
 
+    // Tests if the output of the get input method is a Contact object.
     @Test
     void testGetInput1() {
         try {
@@ -33,6 +34,7 @@ class InputTest {
             e.printStackTrace();
         }
     }
+    // Tests for correct exception handling in case of invalid file path format.
     @Test
     void testgetInput2(){
         Exception e = assertThrows(Exception.class, () ->{

@@ -14,6 +14,16 @@ public class Census {
     private Census(){
         super();
     }
+
+    /**
+     * This method calls an api from the US Census office to get a list
+     * of the 500 most common last names of people living in
+     * America.
+     * @return Stream(String)
+     * @see "<a href="https://api.census.gov/data/2010/surname?get=NAME&RANK=1:500">Census API URL</a>"
+     * @throws IOException
+     * @throws InterruptedException
+     */
     private static Stream<String> getNames() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_1_1)
@@ -32,6 +42,13 @@ public class Census {
 
 
     }
+
+    /**
+     * This method checks if a possible last name taken from the card ocr is in the 500
+     * names from the Census API.
+     * @param name
+     * @return boolean
+     */
     public static boolean checkNames(String name) {
         try {
             return getNames()
