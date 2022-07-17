@@ -24,7 +24,9 @@
 							"    const data = pm.response.json();\r",
 							"    pm.expect(data[0][0]).to.equal(\"NAME\");\r",
 							"    pm.expect(data[0][1]).to.equal(\"RANK\");\r",
-							"    console.log(data);\r",
+							"    for(let i = 0; i < 15; i++){\r",
+							"        console.log(data[i]);\r",
+							"    }\r",
 							"});"
 						],
 						"type": "text/javascript"
