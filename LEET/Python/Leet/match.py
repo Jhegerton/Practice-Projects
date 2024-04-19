@@ -1,92 +1,53 @@
 from typing import *
+from re import split, sub
 
 
 class Solution:
-    @staticmethod
-    def get_locations(s: str, val: str) -> List[int]:
-        indexes = []
-        cut_len = 0
-        try:
-            while True:
-                index = s.index(val)
-                indexes.append(index + cut_len)
-                cut_len = len(s[:index + 1])
-                s = s[index + 1:]
-        except ValueError:
-            return sorted(indexes)
-
-    @staticmethod
-    def get_path(s: List[str], s_match: List[int]) -> Dict[int, List[str]]:
-        path = dict()
-        num = 0
-        i = 0
-        char = 0
-        while i < len(s):
-            print(f'char: {char}', f'{i}: {s[i]}')
-            if i == 0:
-                print('first')
-                char = s[i]
-
-            if i in s_match:
-                print('second')
-                temp = []
-                temp.append(s[i])
-                temp.append(s[i + 1])
-                char = s[i + 1] if s[i + 2] else None
-                num += 1
-                path[num] = temp
-                i += 1
-
-            elif char == s[i]:
-                print('third')
-                temp2 = []
-                while i < len(s) and char == s[i]:
-                    char = s[i]
-                    temp2.append(s[i])
-                    i += 1
-                path[num] = temp2
-
-            else:
-                print('fourth')
-                temp3 = [s[i]]
-                char = s[i]
-                num += 1
-                path[num] = temp3
-
-            i += 1
-        return path
 
     def isMatch(self, s: str, p: str) -> bool:
-        s_stars: List[int] = self.get_locations(s, '*')
-        p_stars: List[int] = self.get_locations(p, '*')
-        # print(p_stars)
-        s, p = [char for char in s], [char for char in p]
-        path = dict()
+        past = s[0]
+        s_out = []
+        for i in range(1, len(s)):
+            s_out.append(past)
+            if s[i] == past and s[i+1] != '*':
+                s_out.append(s[i])
+                past = s[i]
 
-        s_match = [i - 1 for i in s_stars]
-        p_match = [i - 1 for i in p_stars]
-        # print(p_match)
+            elif s[i] == past and i + 1 < len(s):
+                if s[i+1] == '*':
+                    s_out.append('|')
+                    s_out.append(s[i])
+                    s_out.append(s[i+1])
+                    past = s[i+1]
+                continue
 
-        if not s_stars and not p_stars:
-            if len(s) != len(p):
-                return False
-            else:
-                while s:
-                    if s.pop() != p.pop():
-                        return False
-                return True
-        else:
-            print(f's:{s}', f'p:{p}')
-            s_path = self.get_path(s, s_match)
-            p_path = self.get_path(p, p_match)
+            elif s[i] == '*':
+                past = s[i]
+                continue
 
-            print(f's_path = {s_path}')
-            print(f'p_path = {p_path}')
+            elif s[i] == '.':
+                s_out.append('|')
+                s_out.append(s[i])
+                past = s[i]
+
+            elif s[i] != past:
+                past = s[i]
+                s_out.append('|')
+                s_out.append(s[i])
+
+        print(s_out)
+
+
+
+
+
 
 
 def main():
     sol = Solution()
-    sol.isMatch('aabbvvd', 'nn*khk*ff')
+    s, p = 'a.bb*.cc.d*.e', 'nn*khk*ff'
+    print(s,p)
+    sol.isMatch(s, p)
 
 
 if __name__ == '__main__':
