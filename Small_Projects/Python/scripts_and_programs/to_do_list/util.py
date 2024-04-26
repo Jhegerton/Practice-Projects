@@ -21,26 +21,38 @@ def is_similar(input_str: str, match_str: str) -> Tuple[str, float, str]:
     # Iterates through the characters in each string to check if they are the same
     for c1, c2 in zip_longest(input_str, match_str):
         # if they are the same the diff string appends an underscore
-        if c1 == c2:
-            diff += '_'
-        # if they are different the diff string appends the correct letter from
-        # the stored string
-        else:
-            diff += f'{c2}'
+        if len(input_str) < len(match_str):
+            if c1 == c2:
+                diff += '_'
+            # if the match string is longer, the diff string appends the correct letter from
+            # the match string
+            else:
+                diff += f'{c2}'
+
+        elif len(input_str) >= len(match_str):
+            if c2:
+                if c1 == c2:
+                    diff += '_'
+                else:
+                    diff += f'{c2}'
+            # if the match string is shorter the diff string appends an 'X' character
+            else:
+                diff += 'X'
 
     # Replaces the non-alphanumeric characters from the string and turns the strings
     # lowercase to control for typos that cause changes in string length
     # or to find the similarities in the strings in case they have case typos
-    input_str = re.sub(r'[^A-Za-z0-9]', '', input_str).lower()
-    match_str = re.sub(r'[^A-Za-z0-9]', '', match_str).lower()
+    input_str_filter = re.sub(r'[^A-Za-z0-9]', '', input_str).lower()
+    match_str_filter = re.sub(r'[^A-Za-z0-9]', '', match_str).lower()
 
     # Initializes same, which is a count of all the characters in the same
     # location in both strings
     same: int = 0
     # finds the length of the shortest string
-    shortest_length: int = len(input_str) if len(input_str) < len(match_str) else len(match_str)
+    shortest_length: int = len(input_str_filter) if (
+            len(input_str_filter) < len(match_str_filter)) else len(match_str_filter)
     # checks step by step for the same character
-    for c1, c2 in zip(input_str, match_str):
+    for c1, c2 in zip(input_str_filter, match_str_filter):
         if c1 == c2:
             same += 1
 
@@ -57,10 +69,10 @@ def main() -> None:
     """
     # Initializes two test id strings
     str1: str = '32Xu-8FLn-bMxn-7pLn-71H4-I67J-1ed5-R4R1'
-    str2: str = '32xU-8fln-bMxn-7pLm-71H4167J-led5-R4R1'
+    str2: str = '32xU-8fln-bMxn-7pLm-71H4167J-led5'
 
     # Gets the tuple output and prints it
-    match_str, percent_match, diff = is_similar(str1, str2)
+    match_str, percent_match, diff = is_similar(input_str=str1, match_str=str2)
     print(match_str, percent_match, diff, sep='\n')
 
 

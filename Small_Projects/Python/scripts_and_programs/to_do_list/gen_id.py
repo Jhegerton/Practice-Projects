@@ -8,7 +8,7 @@ from typing import List, Generator
 from errors import TimeOutError
 
 
-class Gen_Id[Gen_Id]:
+class GenId[Gen_Id]:
     """
     This class has the methods and constant required to create unique ids
     """
