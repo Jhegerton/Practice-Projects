@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2b0f373-1c13-4580-a99d-6c73c7017403" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Leet/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leet/match.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/Leet-Exercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/AddTwoNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/LongestSubstring.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/MedianOfArrays.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/PalindromicSubstring.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/problems/TwoSome.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/utils/LeetException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/utils/M.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/utils/Rand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/utils/Tree$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/out/production/Leet-Exercise/utils/Tree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/AddTwoNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/LongestSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/MedianOfArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/PalindromicSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/problems/TwoSome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/utils/LeetException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/utils/M.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/utils/Rand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Java/Leet-Exercise/src/utils/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/Leet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/cards/cards.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/rock_paper_scissors/rock_paper_scissors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.idea/to_do_list.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/errors-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/gen_id-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/interface-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/main-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/tasks-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/.ipynb_checkpoints/util-checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/gen_id.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/user_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Small_Projects/Python/Scratch/to_do_list/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/Leet-Exercise.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/AddTwoNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/LongestSubstring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/MedianOfArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/PalindromicSubstring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Problems/TwoSome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Utils/LeetException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Utils/M.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Utils/Rand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Utils/Tree$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/out/production/Leet-Exercise/Utils/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/AddTwoNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/LongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/MedianOfArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/PalindromicSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/problems/TwoSome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/utils/LeetException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/utils/M.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/utils/Rand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java/Leet-Exercise/src/utils/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leet/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leet/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leet/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Leet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/match.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rock_paper_scissors.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Jhegerton"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Jhegerton/personal-practice.git",
+    "accountId": "468eac55-26d7-49ef-8aa5-c3599e2e86d4"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fKYk0B5NOt3FkW3n6c5vFlYD2O" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.match.executor": "Run",
+    "Python.tmp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "leet__python",
+    "last_opened_file_path": "C:/Git/personal-practice/Small_Projects/Python/Scratch"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Git\personal-practice\LEET\Python\Scratch" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git\personal-practice\LEET\Python\Scratch\rock_paper_scissors" />
+      <recent name="C:\Git\personal-practice\LEET\Python\Scratch\cards" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.tmp">
+    <configuration name="match" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Leet" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/match.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tmp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Leet" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tmp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tmp" />
+        <item itemvalue="Python.match" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2b0f373-1c13-4580-a99d-6c73c7017403" name="Changes" comment="" />
+      <created>1713551376742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713551376742</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
