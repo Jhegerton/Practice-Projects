@@ -16,3 +16,24 @@ class TestUtil(unittest.TestCase):
         self.assertEqual(match_str, '32xU-8fln-bMxn-7pLm-71H4167J-led5')
         self.assertEqual(percent_match, 0.8928571428571429)
         self.assertEqual(diff, '__xU__fl__________m_____167J-led5XXXXXX')
+
+    def test_identical_strings(self):
+        self.assertEqual(is_similar("hello", "hello"), ("hello", 1.0, "_____"))
+
+    def test_different_strings(self):
+        self.assertEqual(is_similar("abc", "def"), ("def", 0.0, "def"))
+
+    def test_partial_similarity(self):
+        self.assertEqual(is_similar("abc", "abd"), ("abd", 2 / 3, "_d_"))
+
+    def test_case_sensitivity(self):
+        self.assertEqual(is_similar("abc", "AbC"), ("AbC", 1.0, "___"))
+
+    def test_substring(self):
+        self.assertEqual(is_similar("abc", "abcdef"), ("abcdef", 1.0, "_____f"))
+
+    def test_empty_string(self):
+        self.assertEqual(is_similar("", "abc"), ("abc", 0.0, "abc"))
+
+    def test_non_alphanumeric(self):
+        self.assertEqual(is_similar("abc!!", "abc"), ("abc", 1.0, "___"))
