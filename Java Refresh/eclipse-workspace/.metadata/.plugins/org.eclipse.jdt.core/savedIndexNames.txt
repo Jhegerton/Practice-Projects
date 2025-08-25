@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+/Users/atlas/Git/Practice-Projects/Java Refresh/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+383847833.index

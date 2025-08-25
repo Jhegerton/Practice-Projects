@@ -1,0 +1,76 @@
+package utils;
+
+import java.util.ArrayList;
+
+import err.PrintAllException;
+
+/**
+ * This class describes useful functions
+ */
+public class UtilityFunctions {
+	static private final int MAX_RETRIES_PRINTALL = 1;
+	
+	/**
+	 * converts an array of any type to an array of strings
+	 * @param objs
+	 * @return string array
+	 */
+	public static String[] convertAllToString(Object[] objs) {
+		ArrayList<String> tempList = new ArrayList<>();
+		
+		for(Object obj: objs) {
+			tempList.add(obj.toString());
+		}
+		
+		return tempList.toArray(new String[0]);
+	}
+	
+	/**
+	 * prints out any number of objects passed
+	 * @param newlines
+	 * @param objs
+	 */
+	public static void printAllRecursive(boolean newlines, Object[] objs, int tries) throws PrintAllException{
+		
+		if(tries > MAX_RETRIES_PRINTALL) {
+			throw new PrintAllException();
+		}
+		// if already is an array of strings it prints them out
+		else if(objs.getClass().getComponentType() == String.class) {
+			if(newlines) {
+				for(Object str : objs) {
+					System.out.println(str);
+				}
+			}
+			else {
+				for(Object str : objs) {
+					System.out.print(str);
+				}
+			}
+		}
+		// if the array is not strings it attempts to convert
+		// and then recursively retries
+		else {
+			String[] strs = convertAllToString(objs);
+			printAllRecursive(newlines, strs, tries + 1);
+		}
+		
+	}
+	
+	/**
+	 * printAllRecursive wrapper function
+	 * @param newlines
+	 * @param objs
+	 */
+	public static void printAll(boolean newlines, Object[] objs) {
+		try {	
+		printAllRecursive(newlines, objs, 0);
+		
+		}catch(PrintAllException e){
+			
+			e.printStackTrace();
+		}
+	}
+	
+}
+

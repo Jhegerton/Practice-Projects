@@ -1,0 +1,13 @@
+!SESSION 2025-08-25 18:53:20.589 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/atlas/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/atlas/.eclipse_keyring -data /Users/atlas/Git/Practice-Projects/Java Refresh/eclipse-workspace/PracticeReview
+
+!ENTRY ch.qos.logback.classic 1 0 2025-08-25 18:53:21.872
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-08-25 18:53:22.747
+!MESSAGE Logback config file: /Users/atlas/Git/Practice-Projects/Java Refresh/eclipse-workspace/PracticeReview/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml

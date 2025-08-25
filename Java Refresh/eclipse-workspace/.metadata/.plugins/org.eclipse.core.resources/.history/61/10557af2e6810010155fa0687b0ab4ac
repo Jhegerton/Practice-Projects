@@ -1,0 +1,10 @@
+package one;
+import Greeting;
+
+class Main {
+	public static void main(String[] args) {	
+		Greeting person1 = new Greeting("Susan");
+		
+		System.out.println(person1);
+	}
+}
