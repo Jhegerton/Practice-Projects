@@ -1,0 +1,23 @@
+package one;
+
+public class Person {
+	String name;
+	
+	public Person(String name) {
+		this.name = name;
+	}
+	
+	public String name() { // setter name
+		return this.name;
+	}
+	
+	public void name(String name) { // getter name
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("My name is %s!", this.name);
+		
+	}
+}

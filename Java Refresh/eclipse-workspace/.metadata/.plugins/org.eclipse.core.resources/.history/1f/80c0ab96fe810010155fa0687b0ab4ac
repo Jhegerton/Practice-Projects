@@ -1,0 +1,58 @@
+package utils;
+
+import java.util.ArrayList;
+
+/**
+ * This class describes useful functions
+ */
+public class UtilityFunctions {
+	
+	/**
+	 * converts an array of any type to an array of strings
+	 * @param objs
+	 * @return string array
+	 */
+	public static String[] convertAllToString(Object[] objs) {
+		ArrayList<String> tempList = new ArrayList<>();
+		
+		for(Object obj: objs) {
+			tempList.add(obj.toString());
+		}
+		
+		return tempList.toArray(new String[0]);
+	}
+	
+	/**
+	 * prints out any number of objects passed
+	 * @param newlines
+	 * @param objs
+	 */
+	public static void printAll(boolean newlines, Object[] objs, int tries) {
+		
+		if(tries > 1) {
+			throw new PrintError("Print all was not able to convert to String");
+		}
+		// if already is an array of strings it prints them out
+		else if(objs.getClass().getComponentType() == String.class) {
+			if(newlines) {
+				for(Object str : objs) {
+					System.out.println(str);
+				}
+			}
+			else {
+				for(Object str : objs) {
+					System.out.print(str);
+				}
+			}
+		}
+		// if the array is not strings it attempts to convert
+		// and then recursively retries
+		else {
+			String[] strs = convertAllToString(objs);
+			printAll(newlines, strs, tries++);
+		}
+		
+	}
+	
+}
+

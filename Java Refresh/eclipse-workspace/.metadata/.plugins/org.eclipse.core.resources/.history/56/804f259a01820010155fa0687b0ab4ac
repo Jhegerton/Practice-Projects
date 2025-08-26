@@ -1,0 +1,10 @@
+package err;
+
+@SuppressWarnings("serial")
+public class PrintAllException extends Exception {
+	
+	public PrintAllException(String message) {
+		super(message);
+	}
+
+}

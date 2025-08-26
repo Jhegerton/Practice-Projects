@@ -1,0 +1,21 @@
+package err;
+
+@SuppressWarnings("serial")
+public class PrintAllException extends Exception {
+	
+	/**
+	 * default constructor
+	 */
+	public PrintAllException() {
+		super("Print all was not able to convert to String, Recursion Overflow");
+	}
+	
+	/**
+	 * constructor for custom error messages
+	 * @param message
+	 */
+	public PrintAllException(String message) {
+		super(message);
+	}
+
+}

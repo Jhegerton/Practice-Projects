@@ -1,0 +1,17 @@
+package one;
+
+public class Greeting {
+	String name;
+	
+	public Greeting(String name) {
+		this.name = name;
+	}
+	
+	public String name() { // setter name
+		return this.name;
+	}
+	
+	public void name(String name) { // getter name
+		this.name = name;
+	}
+}

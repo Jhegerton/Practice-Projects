@@ -1,0 +1,18 @@
+1756148429991	Move compilation unit
+1756152275383	Rename type 'Greeting'
+1756156340427	Rename package 'one'
+1756156372306	Move compilation unit
+1756170650631	Rename type 'ConstEnum'
+1756171447066	Rename compilation unit 'Constants.java'
+1756171559498	Rename compilation unit 'IntegerConstants.java'
+1756172141912	Delete element
+1756173320051	Delete element
+1756233057881	Rename compilation unit 'examples.java'
+1756233581837	Rename package 'cons'
+1756233595831	Rename package 'err'
+1756233603801	Rename package 'erros'
+1756233612149	Rename package 'exmp'
+1756233622948	Rename package 'objs'
+1756233647491	Rename package 'utils'
+1756233939274	Rename compilation unit 'Calculator.java'
+1756237131654	Rename type 'PrintAllException'

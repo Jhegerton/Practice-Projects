@@ -1,0 +1,44 @@
+package one;
+import java.util.Date;
+
+public class Person {
+	private String name;
+	private String number; // Phone Number
+	private Date dob; // Date of Birth
+	
+	public Person(String name, String number, Date dob) {
+		this.name = name;
+		this.number = number;
+		this.dob = dob;
+	}
+	
+	public String name() { // setter name
+		return this.name;
+	}
+	
+	public void name(String name) { // getter name
+		this.name = name;
+	}
+	
+	public String number() { // setter number
+		return this.number;
+	}
+	
+	public void number(String number) { // getter number
+		this.name = number;
+	}
+	
+	public Date dob() { // setter dob
+		return this.dob;
+	}
+	
+	public void name(Date dob) { // getter dob
+		this.dob.set((int) dob.getTime());
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("My name is %s%nMy phone number is %s%n and my dob is %s.", this.name, this.number, this.dob.);
+		
+	}
+}
