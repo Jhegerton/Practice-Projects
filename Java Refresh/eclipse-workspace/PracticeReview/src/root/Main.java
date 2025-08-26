@@ -3,7 +3,7 @@
  */
 package root;
 
-import exmp.Example;
+import examples.Example;
 
 /**
  * this is the Main method class

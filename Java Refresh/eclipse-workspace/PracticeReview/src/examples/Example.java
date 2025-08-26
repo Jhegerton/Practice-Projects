@@ -1,6 +1,6 @@
-package exmp;
-import objs.Person;
-import utils.UtilityFunctions;
+package examples;
+import objects.Person;
+import utilities.UtilityFunctions;
 
 /**
  * this class describes example methods

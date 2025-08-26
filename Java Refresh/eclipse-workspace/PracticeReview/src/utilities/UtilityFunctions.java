@@ -1,7 +1,8 @@
-package utils;
+package utilities;
 import java.util.ArrayList;
-import err.PrintAllException;
-import cons.Enums.IntegerEnum;
+
+import constants.Enums.IntegerEnum;
+import errors.PrintAllException;
 
 
 /**

@@ -1,4 +1,4 @@
-package cons;
+package constants;
 
 /**
  * this class defines enums for various types of constants
