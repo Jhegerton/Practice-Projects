@@ -11,12 +11,12 @@ public class GeometryCalculator extends Geometry{
 		super();
 	}
 	
-	public GeometryCalculator(Float x, Float y, Float z, Float r) {
+	public GeometryCalculator(Double x, Double y, Double z, Double r) {
 		super();
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		this.r = r;
+		this.x = Float.valueOf(x.toString());
+		this.y = Float.valueOf(y.toString());
+		this.z = Float.valueOf(z.toString());
+		this.r = Float.valueOf(r.toString());
 		
 	}
 

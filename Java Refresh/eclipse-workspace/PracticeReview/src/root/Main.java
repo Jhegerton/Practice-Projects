@@ -16,7 +16,7 @@ class Main {
 	 * @param args (command line)
 	 */
 	public static void main(String[] args) {	
-		example.personExample();
+		example.geometryExample();
 	}
 }
 

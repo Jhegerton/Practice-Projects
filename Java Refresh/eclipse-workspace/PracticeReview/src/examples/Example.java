@@ -1,4 +1,5 @@
 package examples;
+import objects.GeometryCalculator;
 import objects.Person;
 import utilities.UtilityFunctions;
 
@@ -7,6 +8,8 @@ import utilities.UtilityFunctions;
  * using the singleton pattern
  */
 public class Example {
+	
+	private static final UtilityFunctions u = UtilityFunctions.getInstance();
 	
 	/**
 	 * private constructor
@@ -29,8 +32,30 @@ public class Example {
 		Person[] people = {person1, person2, person3};
 		
 		
-		UtilityFunctions.printAll(true, people);
+		u.printAll(true, people);
+		
+	}
+	
+	public void geometryExample() {
+		var calc1 = new GeometryCalculator(1.0,1.0,1.0,1.0);
+		var calc2 = new GeometryCalculator(2.0,2.0,2.0,2.0);
+		var calc3 = new GeometryCalculator(3.0,3.0,3.0,3.0);
+		
+		GeometryCalculator[] calcs = {calc1, calc2, calc3};
+		
+		for (GeometryCalculator calc : calcs) {
+			u.println(calc.area());
+			u.println(calc.perimeter());
+			u.println(calc.volume());
+			u.println(calc.circumference());
+			u.println(calc.diameter());
+			u.println(calc.cArea());
+			u.println(calc.cVolume());
+		}
 		
 	}
 
 }
+
+
+
