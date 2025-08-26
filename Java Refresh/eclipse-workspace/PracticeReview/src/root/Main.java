@@ -1,3 +1,6 @@
+/**
+ * @author Harrison Egerton
+ */
 package root;
 
 import objs.Person;
