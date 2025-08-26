@@ -1,3 +1,4 @@
+command=/Applications/Eclipse Java.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.7.v20250502-0916/jre/bin/javadoc
 content_assist_completion_replacement_background=200,200,0
 content_assist_completion_replacement_background,defaultValueBeforeOverriddenFromCSS=255,255,0
 content_assist_completion_replacement_foreground=200,0,0
