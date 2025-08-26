@@ -1,14 +1,18 @@
 package utils;
-
 import java.util.ArrayList;
-
 import err.PrintAllException;
+import cons.Enums.IntegerEnum;
+
 
 /**
  * This class describes useful functions
  */
 public class UtilityFunctions {
-	static private final int MAX_RETRIES_PRINTALL = 1;
+	
+	/**
+	 * empty constructor to avoid implicit construction
+	 */
+	private UtilityFunctions() {}
 	
 	/**
 	 * converts an array of any type to an array of strings
@@ -32,7 +36,7 @@ public class UtilityFunctions {
 	 */
 	public static void printAllRecursive(boolean newlines, Object[] objs, int tries) throws PrintAllException{
 		
-		if(tries > MAX_RETRIES_PRINTALL) {
+		if(tries > IntegerEnum.MAX_RETRIES_PRINTALL.get()) {
 			throw new PrintAllException();
 		}
 		// if already is an array of strings it prints them out
