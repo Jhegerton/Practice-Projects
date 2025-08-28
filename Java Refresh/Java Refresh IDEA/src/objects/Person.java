@@ -5,94 +5,119 @@ import java.time.format.DateTimeFormatter;
 import utilities.UtilityFunctions;
 
 /**
- * This class defines people
+ * This class defines people.
  */
 public class Person {
-	
-	private static UtilityFunctions u = UtilityFunctions.getInstance();
+
+    // define class variables
+	private static final UtilityFunctions U =
+            UtilityFunctions.getInstance();
 	
 	// Object variables
-	private String name = "";
-	private String number = ""; // Phone Number
-	private LocalDate dob = null; // Date of Birth 
+	private String name; // given name
+	private String number; // phone number
+	private LocalDate dob; // date of birth
 	
 	/**
-	 * default constructor
+	 * The default constructor.
 	 */
-	public Person() {}
+	public Person() {
+        super();
+    }
 	
 	/**
-	 * constructor with LocalDate object
-	 * @param name
-	 * @param number
-	 * @param dob
+	 * The alternate constructor with a local date object.
+	 * @param name The person's given name.
+	 * @param number The person's phone number.
+	 * @param dob The person's date of birth.
 	 */
-	public Person(String name, String number, LocalDate dob) {
+	public Person(
+            String name,
+            String number,
+            LocalDate dob
+    ) {
 		this.name = name;
 		this.number = number;
 		this.dob = dob;
 	}
 	
 	/**
-	 * constructor with time values
-	 * @param name
-	 * @param number
-	 * @param day
-	 * @param month
-	 * @param year
+	 * Alternate constructor with individual time values.
+	 * @param name The person's given name.
+	 * @param number The person's phone number.
+	 * @param day The person's day of birth.
+	 * @param month The person's month of birth.
+	 * @param year The person's year of birth.
 	 */
-	public Person(String name, String number, int day, int month, int year) {
+	public Person(
+            String name,
+            String number,
+            int day,
+            int month,
+            int year
+    ) {
 		this.name = name;
 		this.number = number;
-		this.dob = LocalDate.of(year, month, day);
+		this.dob = LocalDate.of(
+                year,
+                month,
+                day
+        );
 	}
 	
 	/**
-	 * getter name
-	 * @return name
+	 * The getter for  a person's given name.
+	 * @return The person's given name.
 	 */
 	public String name() { 
 		return this.name;
 	}
+
 	/**
-	 * setter name
-	 * @param name
+	 * The setter for a person's given name.
+	 * @param name The person's given name.
 	 */
 	public void name(String name) {
 		this.name = name;
 	}
 	
 	/**
-	 * getter number
-	 * @return number
+	 * The getter for a person's phone number.
+	 * @return The person's phone number.
 	 */
-	public String number() { // getter number
+	public String number() {
 		return this.number;
 	}
 	
 	/**
-	 * setter number
-	 * @param number
+	 * The setter for a person's phone number.
+	 * @param number The person's phone number.
 	 */
 	public void number(String number) {
 		this.name = number;
 	}
 	
 	/**
-	 * getter dob
-	 * @return dob
+	 * The getter for the person's date of birth.
+	 * @return The person's date of birth.
 	 */
 	public LocalDate dob() {
 		return this.dob;
 	}
 	
 	public String dobToString() {
-		return this.dob.format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+
+        return this.dob.format(
+                DateTimeFormatter
+                        // format for dob String
+                        .ofPattern("MM/dd/yyyy")
+        );
 	}
 	
 	/**
-	 * setter dob with LocalDate object
-	 * @param dob
+	 * The setter for the person's date of birth using a local
+     * date object.
+	 * @param dob The person's date of birth.
 	 */
 	public void dob(LocalDate dob) {
 		// dob is immutable
@@ -101,35 +126,48 @@ public class Person {
 	}
 	
 	/**
-	 * setter dob with time values
-	 * @param day
-     * @param month
-     * @param year
+	 * The setter for the person's date of birth using individual
+     * time values.
+	 * @param day The person's day of birth.
+     * @param month The person's month of birth.
+     * @param year The person's year of birth.
 	 */
-	public void dob(int day, int month, int year) {
-		this.dob.atTime(year, month, day);
+	public void dob(
+            int day,
+            int month,
+            int year
+    ) {
+		this.dob.atTime(
+                year,
+                month,
+                day
+        );
 	}
 	
 	
 	/**
-	 * equals method
-	 * @param p
-	 * @return if equal
+	 * The method to deep check two people.
+	 * @param p The person to compare with this person object.
+	 * @return The boolean flag whether the two people are the same.
 	 */
 	public boolean equals(Person p) {
-		return (
-				this.name == p.name &&
-				this.number == p.number &&
-				this.dob.equals(p.dob)
-				);
+		return
+				this.name.equals(p.name) &&
+				this.number.equals(p.number) &&
+				this.dob.equals(p.dob);
 				
 	}
-	
+
+    /**
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
+     */
 	@Override
 	public String toString() {
 		return String.format(
 				"<<class=%s, id=%s> name=%s, number=%s, dob=%s>", 
-				u.findMyClass(this),
+				U.findMyClass(this),
 				this.hashCode(),
 				this.name, 
 				this.number,

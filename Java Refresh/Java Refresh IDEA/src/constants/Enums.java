@@ -1,12 +1,19 @@
 package constants;
 
 /**
- * this class defines enums for various types of constants
+ * This class defines enums for various types of constants.
  */
 public class Enums {
+
+    /**
+     * The default constructor is private to disallow instantiation.
+     */
+    private Enums(){
+        super();
+    }
 	
 	/**
-	 * enum for integer constants
+	 * Defines the enum for integer constants.
 	 */
 	public static enum IntegerEnum {
 		MAX_RETRIES_PRINTALL(1);
@@ -14,19 +21,19 @@ public class Enums {
 		private final int num;
 		
 		/**
-		 * constructor
-		 * @param num
+		 * The default constructor.
+		 * @param num This is an integer constant.
 		 */
 		IntegerEnum(int num){
-			this.num  = num;
+            this.num  = num;
 		}
 		
 		/**
-		 * value getter
-		 * @return
+		 * A getter for the integer constant for individual enumerations.
+		 * @return The defined integer constant.
 		 */
 		public int get() {
-			return this.num;
+            return this.num;
 		}
 	}
 

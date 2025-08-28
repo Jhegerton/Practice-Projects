@@ -1,6 +1,3 @@
-/**
- * @author Harrison Egerton
- */
 package root;
 
 import examples.Example;
@@ -8,21 +5,30 @@ import utilities.MathUtil;
 import utilities.UtilityFunctions;
 
 /**
- * this is the Main method class
+ * This is the main method entry class.
  */
 class Main {
-	
-	private static Example example = Example.getInstance();
-	private static UtilityFunctions u = UtilityFunctions.getInstance();
-    private static MathUtil mu = MathUtil.getInstance();
+
+    // Class defined static variables
+	private static final Example EXAMPLE =
+            Example.getInstance();
+	private static final UtilityFunctions U =
+            UtilityFunctions.getInstance();
+    private static final MathUtil MU =
+            MathUtil.getInstance();
 	
 	/**
-	 * this is the main entry method
-	 * @param args (command line)
+	 * This is the main entry method.
+	 * @param args The command line arguments.
 	 */
 	public static void main(String[] args) {
-        Integer[] factors = mu.primeFactor(20);
-        u.printAll(false, factors);
+        Integer[] factors =
+                MU.primeFactor(20);
+
+        U.printAll(
+                false,
+                factors
+        );
 
 	}
 }
