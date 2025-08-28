@@ -16,8 +16,8 @@ public class Fraction {
             MathUtil.getInstance();
 
     // define Fraction object variables
-    private Integer numer;
-    private Integer denom;
+    private Integer numer; // numerator
+    private Integer denom; // denominator
 
     /**
      * default constructor

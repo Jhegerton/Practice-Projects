@@ -60,7 +60,7 @@ public class Example {
                 7,
                 1987
         );
-
+        // create a Person array to pass to printALl
         Person[] people = {person1, person2, person3};
 
 
@@ -93,7 +93,7 @@ public class Example {
                 3.987,
                 3.159
         );
-
+        // create a GeometryCalculator to pass to printAll
         GeometryCalculator[] calcs = {calc1, calc2, calc3};
 
         U.printAll(
@@ -101,7 +101,9 @@ public class Example {
                 calcs
         );
 
+        // iterate over all objects
         for (GeometryCalculator calc : calcs) {
+            // run each calculation for each object
             U.println(calc.area());
             U.println(calc.perimeter());
             U.println(calc.volume());

@@ -33,7 +33,7 @@ public class MathUtil {
     }
 
     /**
-     * returns the prime factorization
+     * recursively returns the prime factorization
      * @param num number to factor
      * @return array of prime factors
      */
@@ -42,21 +42,27 @@ public class MathUtil {
 
         final int STOP = (int) Math.ceil(
                 Math.sqrt(num)
-        );
+        ); // stop checking for factors at sqrt of num
         for(int i=2; i<=STOP; i++){
             if(num % i == 0){
+                // divide and conquer at i
                 factors.add(i);
                 factors.addAll(
                         List.of(
+                                // remove the factor i and
+                                // run the method again
+                                // with remaining
                                 primeFactor(num / i)
                         )
                 );
+                // return remaining factors as array
                 return factors.toArray(
                         new Integer[0]
                 );
             }
         }
-       return new Integer[] {num};
+        // return when num is prime
+       return new Integer[] {num}; // prime factors as int array
     }
 
     /**
@@ -67,10 +73,9 @@ public class MathUtil {
     public boolean isPrime(int num){
         final int STOP = (int) Math.ceil(
                 Math.sqrt(num)
-        );
+        ); // stop checking for prime at sqrt num
         for(int i=2; i<=STOP; i++){
-            int j = STOP - i + 2;
-            if(num % j == 0){
+            if(num % i == 0){
                 return false;
             }
         }
@@ -87,27 +92,28 @@ public class MathUtil {
         Set<Integer> num1Factors =
                 Set.of(
                         primeFactor(num1)
-                );
+                ); // get prime factors of num1
         Set<Integer> num2Factors =
                 Set.of(
                         primeFactor(num2)
-                );
+                ); // get prime factors of num2
 
-        Set<Integer> sharedFactors =
+        Set<Integer> sharedFactors = // creates a list of shared factors
                 num1Factors
                 .stream()
                 .filter(
                         num2Factors::contains
-                )
+                ) // filter num1Factors for num2Factors
                 .collect(
+                        // collect factors into a new set
                         Collectors.toSet()
                 );
 
-        int  gcf = 0;
+        int  gcf = 1;
         for(int factor : sharedFactors){
-            gcf += factor;
-        }
-        return gcf;
+            gcf *= factor;
+        } // multiply all common factors to find the greatest common factor
+        return gcf; // return greatest common factor
 
     }
 

@@ -223,6 +223,7 @@ public class GeometryCalculator extends Geometry {
                         this.r.toString()
                 ),2.0
         );
+        // return as Float value
 		return Float.valueOf(
                 Double.toString(doubleCArea)
         );
@@ -244,6 +245,7 @@ public class GeometryCalculator extends Geometry {
                         ),3.0
                 )
         );
+        // return as Float value
 		return Float.valueOf(
                 Double.toString(doubleCVolume)
         );

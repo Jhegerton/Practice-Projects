@@ -1,5 +1,6 @@
 package utilities;
 import java.util.ArrayList;
+import java.util.List;
 
 import constants.Enums.IntegerEnum;
 import errors.PrintException;
@@ -37,12 +38,15 @@ public class UtilityFunctions {
 	 * @return string array of all objects
 	 */
 	public String[] convertAllToStrings(Object[] objs) {
-		ArrayList<String> tempList = new ArrayList<>();
-		
+		// define a temporary list to hold Strings
+        List<String> tempList = new ArrayList<>();
+
+        // iterate over all objects in passed array
 		for(Object obj: objs) {
+            // add the toString output to the list
 			tempList.add(obj.toString());
 		}
-		
+		// return as array of Strings
 		return tempList.toArray(new String[0]);
 	}
 	
@@ -62,30 +66,44 @@ public class UtilityFunctions {
     ) throws PrintException {
 		
 		if(tries > IntegerEnum.MAX_RETRIES_PRINTALL.get()) {
+            // if the recursive goes through more than twice
+            // then the recursion will end in a PrintException
 			throw new PrintException();
 		}
-		// if already is an array of strings it prints them out
-		else if(objs.getClass().getComponentType() == String.class
-        ) {
-			if(newlines) {
-				for(Object str : objs) {
-					System.out.println(str);
+		// checks if it is an array of Strings
+		else if(objs
+                .getClass()
+                .getComponentType() == String.class
+        )
+        {
+            // if the array is already made of Strings
+			if(newlines)  // check for newlines flag
+            {
+				for(Object obj : objs) {
+                    // print on new-line for each String
+					System.out.println(obj);
 				}
 			}
 			else {
-				for(Object str : objs) {
-					System.out.print(str);
+				for(Object obj : objs) {
+                    // print on inline for each String
+					System.out.print(obj);
 				}
 			}
 		}
 		// if the array is not strings it attempts to convert
 		// and then recursively retries
-		else {
+		else // the array is not made of Strings
+        {
+            // attempt to convert all Objects in array
+            // to Strings
 			String[] strs = convertAllToStrings(objs);
+
+            // attempts to print again
 			printAllRecursive(
-                    newlines,
-                    strs,
-                    tries + 1
+                    newlines, // keep flag unchanged
+                    strs,     // pass the new array
+                    ++tries   // increase the count of tries
             );
 		}
 		
@@ -101,19 +119,25 @@ public class UtilityFunctions {
             Object obj,
             int tries
     ) throws PrintException {
+        // checks if the object is a String
 		boolean isString = obj
                 .getClass() == String.class;
 		
 		if(tries > 1) {
+            // if the recursive goes through more than twice
+            // then the recursion will end in a PrintException
 			throw new PrintException();
 		}
 		else if(isString) {
+            // it is a String and it is printed
 			System.out.print(obj);
 		}
-		else {
+		else { // it is not a String
+
+            // attempts to print again
 			printRecursive(
-                    obj.toString(),
-                    tries + 1
+                    obj.toString(), // convert object to String
+                    ++tries         // increase count of tries
             );
 		}
 		
@@ -129,19 +153,24 @@ public class UtilityFunctions {
             Object obj,
             int tries
     ) throws PrintException {
+        // checks if the object is a String
 		boolean isString = obj
                 .getClass() == String.class;
 		
 		if(tries > 1) {
+            // if the recursive goes through more than twice
+            // then the recursion will end in a PrintException
 			throw new PrintException();
 		}
 		else if(isString) {
+            // it is a String and is printed in a new-line
 			System.out.println(obj);
 		}
-		else {
+		else { // it is not a String
+            // attempts to print again
 			printlnRecursive(
-                    obj.toString(),
-                    tries + 1
+                    obj.toString(), // attempts to convert
+                    ++tries         // increase count of tries
             );
 		}
 		
@@ -158,15 +187,16 @@ public class UtilityFunctions {
             boolean newlines,
             Object[] objs
     ) {
-		try {	
+		try {
+        // starts the printAllRecursive method as wrapper
 		printAllRecursive(
-                newlines,
-                objs,
-                0
+                newlines, // passed in
+                objs,     // passed in
+                0         // tries initialized (wrapper required)
         );
 		
 		}catch(PrintException e){
-			e.printStackTrace();
+			e.printStackTrace(); // print error stack trace
 		}
 	}
 	
@@ -177,12 +207,12 @@ public class UtilityFunctions {
 	public void print(Object obj) {
 		try {	
 		printRecursive(
-                obj,
-                0
+                obj,    // passed in
+                0       // tries initialized (wrapper required)
         );
 		
 		}catch(PrintException e){
-			e.printStackTrace();
+			e.printStackTrace(); // print error stack trace
 		}
 	}
 	
@@ -193,12 +223,12 @@ public class UtilityFunctions {
 	public void println(Object obj) {
 		try {	
 		printlnRecursive(
-                obj,
-                0
+                obj, // passed in
+                0    // tries initialized (wrapper required)
         );
 		
 		}catch(PrintException e){
-			e.printStackTrace();
+			e.printStackTrace(); // print error stack trace
 		}
 	}
 
@@ -208,9 +238,10 @@ public class UtilityFunctions {
      * @return String of the class name of object
      */
 	public String findMyClass(Object obj) {
-		return obj.getClass().
-                getName().
-                split("\\.")[1];
+		return obj.getClass(). // git class data
+                getName().     // get name output
+                // pull the class name from the output
+                split("\\.")[1]; // return class name String
 	}
 
     /**
