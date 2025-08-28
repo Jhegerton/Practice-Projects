@@ -19,11 +19,7 @@ public class Person {
 	/**
 	 * default constructor
 	 */
-	public Person() {
-		this.name = "";
-		this.number = "";
-		this.dob = null;
-	}
+	public Person() {}
 	
 	/**
 	 * constructor with LocalDate object
@@ -96,7 +92,7 @@ public class Person {
 	
 	/**
 	 * setter dob with LocalDate object
-	 * @param day, month, year
+	 * @param dob
 	 */
 	public void dob(LocalDate dob) {
 		// dob is immutable
@@ -106,7 +102,9 @@ public class Person {
 	
 	/**
 	 * setter dob with time values
-	 * @param day, month, year
+	 * @param day
+     * @param month
+     * @param year
 	 */
 	public void dob(int day, int month, int year) {
 		this.dob.atTime(year, month, day);

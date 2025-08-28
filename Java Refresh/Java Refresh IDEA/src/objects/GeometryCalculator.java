@@ -97,8 +97,8 @@ public class GeometryCalculator extends Geometry {
 
 	@Override
 	public Float cVolume() {
-		Double doubleCVolume = (4.0/3.0) * (PI * Math.pow(Double.valueOf(this.r.toString()),3.0));
-		return Float.valueOf(doubleCVolume.toString());
+		double doubleCVolume = (4.0/3.0) * (PI * Math.pow(Double.parseDouble(this.r.toString()),3.0));
+		return Float.valueOf(Double.toString(doubleCVolume));
 	}
 	
 	@Override

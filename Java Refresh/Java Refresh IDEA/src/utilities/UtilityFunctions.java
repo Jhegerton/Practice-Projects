@@ -19,7 +19,7 @@ public class UtilityFunctions {
 	
 	/**
 	 * singleton instantiation
-	 * @return UtilityFunctions
+	 * @return instance
 	 */
 	public static UtilityFunctions getInstance() {
 		if(UtilityFunctions.instance == null){
