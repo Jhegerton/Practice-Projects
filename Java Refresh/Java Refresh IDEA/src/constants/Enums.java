@@ -18,15 +18,15 @@ public class Enums {
 		 * @param num integer constant
 		 */
 		IntegerEnum(int num){
-			this.num  = num;
+            this.num  = num;
 		}
 		
 		/**
 		 * value getter
-		 * @return num integer constant
+		 * @return num
 		 */
 		public int get() {
-			return this.num;
+            return this.num;
 		}
 	}
 

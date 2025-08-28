@@ -8,7 +8,7 @@ import utilities.UtilityFunctions;
 public class GeometryCalculator extends Geometry {
 
     // define class variables
-	private static final UtilityFunctions u = UtilityFunctions.getInstance();
+	private static final UtilityFunctions U = UtilityFunctions.getInstance();
 
     // define geometry calculator object variables
 	private Float x; // length
@@ -29,7 +29,11 @@ public class GeometryCalculator extends Geometry {
      * @param y width
      * @param z height
      */
-	public GeometryCalculator(Double x, Double y, Double z) {
+	public GeometryCalculator(
+            Double x,
+            Double y,
+            Double z
+    ) {
 		super();
         this.x = Float.valueOf(
                 z.toString()
@@ -46,7 +50,9 @@ public class GeometryCalculator extends Geometry {
      * alternate constructor r only
      * @param r radius
      */
-    public GeometryCalculator(Double r) {
+    public GeometryCalculator(
+            Double r
+    ) {
         super();
         this.r = Float.valueOf(
                 r.toString()
@@ -60,7 +66,12 @@ public class GeometryCalculator extends Geometry {
      * @param z height
      * @param r radius
      */
-	public GeometryCalculator(Double x, Double y, Double z, Double r) {
+	public GeometryCalculator(
+            Double x,
+            Double y,
+            Double z,
+            Double r
+    ) {
 		super();
 		this.x = Float.valueOf(
                 x.toString()
@@ -83,8 +94,8 @@ public class GeometryCalculator extends Geometry {
      */
 	@Override
 	public Float x() {
-		return this.x;
-	}
+        return this.x;
+    }
 
     /**
      * x setter
@@ -101,8 +112,8 @@ public class GeometryCalculator extends Geometry {
      */
 	@Override
 	public Float y() {
-		return this.y;
-	}
+        return this.y;
+    }
 
     /**
      * y setter
@@ -119,8 +130,8 @@ public class GeometryCalculator extends Geometry {
      */
 	@Override
 	public Float z() {
-		return this.z;
-	}
+        return this.z;
+    }
 
     /**
      * z setter
@@ -137,8 +148,8 @@ public class GeometryCalculator extends Geometry {
      */
 	@Override
 	public Float r() {
-		return this.r;
-	}
+        return this.r;
+    }
 
     /**
      * r setter
@@ -167,7 +178,8 @@ public class GeometryCalculator extends Geometry {
 	public Float perimeter() {
         // (1) perimeter = x + x + y + y
         // (2) perimeter = (2 * x ) + (2 * y)
-		return 2 *(this.x + this.y);
+		return 2 *
+                (this.x + this.y);
 	}
 
     /**
@@ -212,9 +224,7 @@ public class GeometryCalculator extends Geometry {
                 ),2.0
         );
 		return Float.valueOf(
-                Double.toString(
-                        doubleCArea
-                )
+                Double.toString(doubleCArea)
         );
 	}
 
@@ -225,7 +235,9 @@ public class GeometryCalculator extends Geometry {
 	@Override
 	public Float cVolume() {
         // volume = 4 * PI * r^3 / 3
-		double doubleCVolume = (4.0/3.0) * (
+		double doubleCVolume = (
+                4.0/3.0
+        ) * (
                 PI * Math.pow(
                         Double.parseDouble(
                                 this.r.toString()
@@ -233,22 +245,19 @@ public class GeometryCalculator extends Geometry {
                 )
         );
 		return Float.valueOf(
-                Double.toString(
-                        doubleCVolume
-                )
+                Double.toString(doubleCVolume)
         );
 	}
 
     /**
-     * GeometryCalculator toString method
+     * redefines the toString for GeometryCalculator objects
      * @return String version of self
      */
 	@Override
 	public String toString() {
-		return String.format
-				(
+		return String.format(
 				"<<class=%s, id=%s> x=%.3f, y=%.3f, z=%.3f, r=%.3f>", 
-				u.findMyClass(this),
+				U.findMyClass(this),
 				this.hashCode(), 
 				this.x, 
 				this.y, 
