@@ -48,7 +48,7 @@ public class Fraction {
      * numer getter
      * @return numer numerator of fraction
      */
-    public int getNumer(){
+    public int numer(){
         return this.numer;
     }
 
@@ -56,19 +56,19 @@ public class Fraction {
      * numer setter
      * @param numer numerator of fraction
      */
-    public void setNumer(int numer){ this.numer  = numer;}
+    public void numer(int numer){ this.numer  = numer;}
 
     /**
      * denom getter
      * @return denom denominator of fraction
      */
-    public int getDenom(){ return this.denom;}
+    public int denom(){ return this.denom;}
 
     /**
      * denom setter
      * @param denom denominator of fraction
      */
-    public void setDenom(int denom){
+    public void denom(int denom){
         try {
             if (denom == 0) {
                 throw new DivideByZeroException("ERROR:The denominator cannot be zero.");
@@ -99,7 +99,9 @@ public class Fraction {
                 (this.numer * fract.denom) +
                         (fract.numer * this.denom);
 
-        Fraction newFraction = new Fraction(newNumer, newDenom);
+        Fraction newFraction = new Fraction(
+                newNumer, newDenom
+        );
         newFraction.simplify();
         return newFraction;
    }
@@ -115,7 +117,9 @@ public class Fraction {
                 (this.numer * fract.denom) -
                         (fract.numer * this.denom);
 
-        Fraction newFraction = new Fraction(newNumer, newDenom);
+        Fraction newFraction = new Fraction(
+                newNumer, newDenom
+        );
         newFraction.simplify();
         return newFraction;
     }
@@ -129,7 +133,9 @@ public class Fraction {
         int newDenom = this.denom * fract.denom;
         int newNumer = this.numer * fract.numer;
 
-        Fraction newFraction = new Fraction(newNumer, newDenom);
+        Fraction newFraction = new Fraction(
+                newNumer, newDenom
+        );
         newFraction.simplify();
         return newFraction;
     }
@@ -143,7 +149,9 @@ public class Fraction {
        int newDenom = this.denom * fract.numer;
        int newNumer = this.numer * fract.denom;
 
-       Fraction newFraction = new Fraction(newNumer, newDenom);
+       Fraction newFraction = new Fraction(
+               newNumer, newDenom
+       );
        newFraction.simplify();
        return newFraction;
    }
@@ -153,7 +161,9 @@ public class Fraction {
      */
    public void simplify() {
        // finds greatest common factor
-       int gcf = mu.getGCF(this.numer, this.denom);
+       int gcf = mu.getGCF(
+               this.numer, this.denom
+       );
        // divides each number by gcf
        // this is always a clean integer division
        this.numer /= gcf;
