@@ -9,9 +9,11 @@ import utilities.UtilityFunctions;
  */
 public class Fraction {
 
-    private static UtilityFunctions u = UtilityFunctions.getInstance();
-    private static MathUtil mu = MathUtil.getInstance();
+    // define class variables
+    private static final UtilityFunctions u = UtilityFunctions.getInstance();
+    private static final MathUtil mu = MathUtil.getInstance();
 
+    // define Fraction object variables
     private Integer numer;
     private Integer denom;
 
@@ -24,13 +26,14 @@ public class Fraction {
 
     /**
      * alternate constructor
-     * @param numerator
-     * @param denominator
+     * @param numerator numerator of fraction
+     * @param denominator denominator of fraction
      */
     public Fraction(int numerator, int denominator){
         try {
             this.numer = numerator;
             if (denominator == 0) {
+                // if denominator is zero throw exception
                 throw new DivideByZeroException("ERROR:The denominator cannot be zero.");
             } else {
                 this.denom = denominator;
@@ -43,7 +46,7 @@ public class Fraction {
 
     /**
      * numer getter
-     * @return numer
+     * @return numer numerator of fraction
      */
     public int getNumer(){
         return this.numer;
@@ -51,31 +54,35 @@ public class Fraction {
 
     /**
      * numer setter
-     * @param numer
+     * @param numer numerator of fraction
      */
-    public void setNumer(int numer){
-        this.numer = numer;
-    }
+    public void setNumer(int numer){ this.numer  = numer;}
 
     /**
      * denom getter
-     * @return denom
+     * @return denom denominator of fraction
      */
-    public int getDenom(){
-        return this.denom;
-    }
+    public int getDenom(){ return this.denom;}
 
     /**
      * denom setter
-     * @param denom
+     * @param denom denominator of fraction
      */
     public void setDenom(int denom){
-        this.denom  = denom;
+        try {
+            if (denom == 0) {
+                throw new DivideByZeroException("ERROR:The denominator cannot be zero.");
+            } else {
+                this.denom = denom;
+            }
+        } catch(DivideByZeroException e){
+            e.printStackTrace();
+        }
     }
 
     /**
      * returns the rational form of the fraction
-     * @return double
+     * @return rational the decimal form
      */
     public double toRational(){
         return (double) this.numer / (double) this.denom;
@@ -83,8 +90,8 @@ public class Fraction {
 
     /**
      * addition method for two fractions
-     * @param fract
-     * @return Fraction
+     * @param fract fraction to add to self
+     * @return newFraction new fraction of sum
      */
    public Fraction add(Fraction fract){
         int newDenom = this.denom * fract.denom;
@@ -99,8 +106,8 @@ public class Fraction {
 
     /**
      * substraction method for two fractions
-     * @param fract
-     * @return Fraction
+     * @param fract fraction to subtract from self
+     * @return newFraction new fraction of the difference
      */
     public Fraction subtract(Fraction fract){
         int newDenom = this.denom * fract.denom;
@@ -115,8 +122,8 @@ public class Fraction {
 
     /**
      * multiplication method for two fractions
-     * @param fract
-     * @return Fraction
+     * @param fract fraction to multiply from self
+     * @return newFraction new fraction of the product
      */
     public Fraction multiply(Fraction fract){
         int newDenom = this.denom * fract.denom;
@@ -128,9 +135,9 @@ public class Fraction {
     }
 
     /**
-     * deivision method for two fractions
-     * @param fract
-     * @return Fraction
+     * division method for two fractions
+     * @param fract fraction to divide by with self
+     * @return newFraction new fraction of the quotient
      */
    public Fraction divide(Fraction fract){
        int newDenom = this.denom * fract.numer;
@@ -141,12 +148,22 @@ public class Fraction {
        return newFraction;
    }
 
+    /**
+     * simplifies a Fraction object in place
+     */
    public void simplify() {
+       // finds greatest common factor
        int gcf = mu.getGCF(this.numer, this.denom);
+       // divides each number by gcf
+       // this is always a clean integer division
        this.numer /= gcf;
        this.denom /= gcf;
    }
 
+    /**
+     * Fraction toString method
+     * @return String version of self
+     */
    @Override
    public String toString(){
         return String.format

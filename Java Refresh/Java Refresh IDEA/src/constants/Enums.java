@@ -15,7 +15,7 @@ public class Enums {
 		
 		/**
 		 * constructor
-		 * @param num
+		 * @param num integer constant
 		 */
 		IntegerEnum(int num){
 			this.num  = num;
@@ -23,7 +23,7 @@ public class Enums {
 		
 		/**
 		 * value getter
-		 * @return
+		 * @return num integer constant
 		 */
 		public int get() {
 			return this.num;
