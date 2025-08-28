@@ -1,6 +1,3 @@
-/// @author Harrison Egerton
-/// @version 1.0
-/// @package For the main entry class.
 package root;
 
 import examples.Example;

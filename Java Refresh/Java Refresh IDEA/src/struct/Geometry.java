@@ -1,5 +1,3 @@
-/// @author Harrison Egerton
-/// @package For abstract classes and interfaces.
 package struct;
 
 /**

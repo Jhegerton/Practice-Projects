@@ -1,5 +1,3 @@
-/// @author Harrison Egerton
-/// @package For standard classes with public constructors.
 package objects;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

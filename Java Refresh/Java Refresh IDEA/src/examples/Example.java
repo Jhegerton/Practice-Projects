@@ -1,5 +1,3 @@
-/// @author Harrison Egerton
-/// @package For example objects and methods.
 package examples;
 import objects.GeometryCalculator;
 import objects.Person;

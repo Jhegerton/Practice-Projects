@@ -1,5 +1,3 @@
-/// @author Harrison Egerton
-/// @package For custom exception classes.
 package errors;
 
 /**

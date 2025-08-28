@@ -1,11 +1,16 @@
-/// @author Harrison Egerton
-/// @package For constant definition classed.
 package constants;
 
 /**
  * This class defines enums for various types of constants.
  */
 public class Enums {
+
+    /**
+     * The default constructor is private to disallow instantiation.
+     */
+    private Enums(){
+        super();
+    }
 	
 	/**
 	 * Defines the enum for integer constants.

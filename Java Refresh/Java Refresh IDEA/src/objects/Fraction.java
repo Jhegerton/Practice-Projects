@@ -1,5 +1,3 @@
-/// @author Harrison Egerton
-/// @package For standard classes with public constructors.
 package objects;
 
 import errors.DivideByZeroException;
@@ -76,7 +74,7 @@ public class Fraction {
         return this.denom;}
 
     /**
-     * The setter for the denoinator
+     * The setter for the denominator
      * @param denom The number to set for the denominator.
      */
     public void denom(int denom){
