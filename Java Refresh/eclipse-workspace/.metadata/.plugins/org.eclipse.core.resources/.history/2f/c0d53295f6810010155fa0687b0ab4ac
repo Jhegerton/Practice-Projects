@@ -1,9 +1,0 @@
-package one;
-
-class Main {
-	public static void main(String[] args) {	
-		Person person1 = new Person("Susan");
-		
-		System.out.println(person1);
-	}
-}

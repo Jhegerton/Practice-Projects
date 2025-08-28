@@ -1,9 +1,0 @@
-package err;
-
-public class PrintAllException extends Exception{
-	
-	public PrintAllException(String message) {
-		super(message);
-	}
-
-}
