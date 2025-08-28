@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// package for utility classes
 package utilities;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ import errors.PrintException;
 /**
  * This class describes useful functions
  */
+
 public class UtilityFunctions {
 	
 	private static UtilityFunctions instance;

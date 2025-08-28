@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// this package is for normal classes
 package objects;
 import struct.Geometry;
 import utilities.UtilityFunctions;

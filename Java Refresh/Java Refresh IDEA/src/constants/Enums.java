@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// @this package is for constant definition classes
 package constants;
 
 /**

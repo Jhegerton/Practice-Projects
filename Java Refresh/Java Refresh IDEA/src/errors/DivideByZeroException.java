@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// this package is for defining exceptions
 package errors;
 
 /**

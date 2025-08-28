@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// this package is for examples of classes
 package examples;
 import objects.GeometryCalculator;
 import objects.Person;

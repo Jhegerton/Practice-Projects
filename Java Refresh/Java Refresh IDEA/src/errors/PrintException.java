@@ -1,6 +1,7 @@
+/// @author Harrison Egerton
+/// this package is for defining exceptions
 package errors;
 
-@SuppressWarnings("serial")
 /**
  * this class defines a recursive error for the print functions
  */

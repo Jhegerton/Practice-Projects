@@ -1,6 +1,5 @@
-/**
- * @author Harrison Egerton
- */
+/// @author Harrison Egerton
+/// package for entry class
 package root;
 
 import examples.Example;

@@ -1,3 +1,5 @@
+/// @author Harrison Egerton
+/// package for utility classes
 package utilities;
 
 import java.util.ArrayList;
