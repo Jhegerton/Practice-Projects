@@ -1,5 +1,5 @@
 /// @author Harrison Egerton
-/// this package is for normal classes
+/// @package For standard classes with public constructors.
 package objects;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 import utilities.UtilityFunctions;
 
 /**
- * This class defines people
+ * This class defines people.
  */
 public class Person {
 
@@ -21,17 +21,17 @@ public class Person {
 	private LocalDate dob; // date of birth
 	
 	/**
-	 * default constructor
+	 * The default constructor.
 	 */
 	public Person() {
         super();
     }
 	
 	/**
-	 * constructor with LocalDate object
-	 * @param name given name
-	 * @param number phone number
-	 * @param dob date of birth
+	 * The alternate constructor with a local date object.
+	 * @param name The person's given name.
+	 * @param number The person's phone number.
+	 * @param dob The person's date of birth.
 	 */
 	public Person(
             String name,
@@ -44,12 +44,12 @@ public class Person {
 	}
 	
 	/**
-	 * constructor with time values
-	 * @param name given name
-	 * @param number phone number
-	 * @param day day of birth
-	 * @param month month of birth
-	 * @param year year of birth
+	 * Alternate constructor with individual time values.
+	 * @param name The person's given name.
+	 * @param number The person's phone number.
+	 * @param day The person's day of birth.
+	 * @param month The person's month of birth.
+	 * @param year The person's year of birth.
 	 */
 	public Person(
             String name,
@@ -68,40 +68,40 @@ public class Person {
 	}
 	
 	/**
-	 * getter name
-	 * @return name given name
+	 * The getter for  a person's given name.
+	 * @return The person's given name.
 	 */
 	public String name() { 
 		return this.name;
 	}
 
 	/**
-	 * setter name
-	 * @param name given name
+	 * The setter for a person's given name.
+	 * @param name The person's given name.
 	 */
 	public void name(String name) {
 		this.name = name;
 	}
 	
 	/**
-	 * getter number
-	 * @return number phone number
+	 * The getter for a person's phone number.
+	 * @return The person's phone number.
 	 */
 	public String number() {
 		return this.number;
 	}
 	
 	/**
-	 * setter number
-	 * @param number phone number
+	 * The setter for a person's phone number.
+	 * @param number The person's phone number.
 	 */
 	public void number(String number) {
 		this.name = number;
 	}
 	
 	/**
-	 * getter dob
-	 * @return dob date of birth
+	 * The getter for the person's date of birth.
+	 * @return The person's date of birth.
 	 */
 	public LocalDate dob() {
 		return this.dob;
@@ -117,8 +117,9 @@ public class Person {
 	}
 	
 	/**
-	 * setter dob with LocalDate object
-	 * @param dob date of birth
+	 * The setter for the person's date of birth using a local
+     * date object.
+	 * @param dob The person's date of birth.
 	 */
 	public void dob(LocalDate dob) {
 		// dob is immutable
@@ -127,10 +128,11 @@ public class Person {
 	}
 	
 	/**
-	 * setter dob with time values
-	 * @param day day of birth
-     * @param month month of birth
-     * @param year year of birth
+	 * The setter for the person's date of birth using individual
+     * time values.
+	 * @param day The person's day of birth.
+     * @param month The person's month of birth.
+     * @param year The person's year of birth.
 	 */
 	public void dob(
             int day,
@@ -146,9 +148,9 @@ public class Person {
 	
 	
 	/**
-	 * deep check equals method
-	 * @param p Person object
-	 * @return if equal
+	 * The method to deep check two people.
+	 * @param p The person to compare with this person object.
+	 * @return The boolean flag whether the two people are the same.
 	 */
 	public boolean equals(Person p) {
 		return
@@ -159,8 +161,9 @@ public class Person {
 	}
 
     /**
-     * redefines the toString for Person objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
 	@Override
 	public String toString() {

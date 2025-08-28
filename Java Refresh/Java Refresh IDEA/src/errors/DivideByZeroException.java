@@ -1,13 +1,13 @@
 /// @author Harrison Egerton
-/// this package is for defining exceptions
+/// @package For custom exception classes.
 package errors;
 
 /**
- * this class defines an error for a division by zero
+ * This class defines an error for a division by zero.
  */
 public class DivideByZeroException extends RuntimeException {
     /**
-     * default constructor
+     * The default constructor.
      */
     public DivideByZeroException(){
         super(
@@ -16,8 +16,8 @@ public class DivideByZeroException extends RuntimeException {
     }
 
     /**
-     * constructor for custom error messages
-     * @param message custom error method
+     * The alternate constructor for custom error messages.
+     * @param message The custom error method.
      */
     public DivideByZeroException(String message) {
         super(message);

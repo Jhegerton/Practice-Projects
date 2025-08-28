@@ -1,5 +1,5 @@
 /// @author Harrison Egerton
-/// package for utility classes
+/// @package For utility classes and methods.
 package utilities;
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * This class defines math utility methods
+ * This class defines the math utility methods.
  */
 public class MathUtil {
 
@@ -17,15 +17,15 @@ public class MathUtil {
             UtilityFunctions.getInstance();
 
     /**
-     * hidden constructor
+     * Singleton patterns require private constructors.
      */
     private MathUtil(){
         super();
     }
 
     /**
-     * Singleton instantiation method
-     * @return MathUtil instance
+     * The singleton pattern's instantiation method.
+     * @return The same instance of the class each time.
      */
     public static MathUtil getInstance(){
         if(MathUtil.instance == null){
@@ -35,9 +35,9 @@ public class MathUtil {
     }
 
     /**
-     * recursively returns the prime factorization
-     * @param num number to factor
-     * @return array of prime factors
+     * This method recursively returns the prime factorization of a number.
+     * @param num The number to find the prime factors.
+     * @return The array of the number's prime factors.
      */
     public Integer[] primeFactor(int num){
         ArrayList<Integer> factors = new ArrayList<>();
@@ -68,9 +68,9 @@ public class MathUtil {
     }
 
     /**
-     * evaluates whether an integer is prime
-     * @param num number to check for prime
-     * @return whether the number is prime
+     * This method evaluates whether an integer is prime.
+     * @param num The number to check if it is prime.
+     * @return A boolean that shows whether the number is prime or not.
      */
     public boolean isPrime(int num){
         final int STOP = (int) Math.ceil(
@@ -85,10 +85,10 @@ public class MathUtil {
     }
 
     /**
-     * finds greatest common factor
-     * @param num1 first number
-     * @param num2 second number
-     * @return greatest common factor for both numbers
+     * This method finds the greatest common factor of two numbers.
+     * @param num1 is the first number.
+     * @param num2 is the second number.
+     * @return The greatest common factor for both numbers.
      */
     public int getGCF(int num1, int num2){
         Set<Integer> num1Factors =
@@ -120,8 +120,9 @@ public class MathUtil {
     }
 
     /**
-     * redefines the toString for MathUtil objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
     @Override
     public String toString(){

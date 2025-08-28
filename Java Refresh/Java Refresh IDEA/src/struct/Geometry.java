@@ -1,11 +1,19 @@
 /// @author Harrison Egerton
-/// this package is for abstract classes and interfaces
+/// @package For abstract classes and interfaces.
 package struct;
 
 /**
- * describes the structure of the Geometry subclasses
+ * Describes the structure of the Geometry subclasses.
  */
 public abstract class Geometry {
+
+    /**
+     * This is a constructor which allows for no instantiation outside of inheritance.
+     */
+    protected Geometry(){
+        super();
+    }
+
     // PI constant for child classes
 	protected static final Float PI = Float.valueOf("3.14");
 

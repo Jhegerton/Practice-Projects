@@ -1,5 +1,6 @@
 /// @author Harrison Egerton
-/// package for entry class
+/// @version 1.0
+/// @package For the main entry class.
 package root;
 
 import examples.Example;
@@ -7,7 +8,7 @@ import utilities.MathUtil;
 import utilities.UtilityFunctions;
 
 /**
- * this is the Main method class
+ * This is the main method entry class.
  */
 class Main {
 
@@ -20,8 +21,8 @@ class Main {
             MathUtil.getInstance();
 	
 	/**
-	 * this is the main entry method
-	 * @param args (command line)
+	 * This is the main entry method.
+	 * @param args The command line arguments.
 	 */
 	public static void main(String[] args) {
         Integer[] factors =

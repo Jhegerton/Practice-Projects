@@ -1,11 +1,11 @@
 /// @author Harrison Egerton
-/// this package is for normal classes
+/// @package For standard classes with public constructors.
 package objects;
 import struct.Geometry;
 import utilities.UtilityFunctions;
 
 /**
- * this class defines simple geometry calculations
+ * This class defines simple geometry calculations.
  */
 public class GeometryCalculator extends Geometry {
 
@@ -19,17 +19,17 @@ public class GeometryCalculator extends Geometry {
 	private Float r; // radius
 
     /**
-     * default constructor
+     * The default constructor.
      */
     public GeometryCalculator() {
         super();
     }
 
     /**
-     * alternate constructor x,y,z only
-     * @param x length
-     * @param y width
-     * @param z height
+     * The alternate constructor with length, width, and height only.
+     * @param x The length of the rectangular prism.
+     * @param y The width of the rectangular prism.
+     * @param z The height of the rectangular prism.
      */
 	public GeometryCalculator(
             Double x,
@@ -49,8 +49,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * alternate constructor r only
-     * @param r radius
+     * The alternate constructor radius only
+     * @param r The radius of the circle.
      */
     public GeometryCalculator(
             Double r
@@ -63,10 +63,10 @@ public class GeometryCalculator extends Geometry {
 
     /**
      * alternate constructor for all variables
-     * @param x length
-     * @param y width
-     * @param z height
-     * @param r radius
+     * @param x The length of the rectangular prism.
+     * @param y The width of the rectangular prism.
+     * @param z The height of the rectangular prism.
+     * @param r The radius of the circle.
      */
 	public GeometryCalculator(
             Double x,
@@ -91,8 +91,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     *  x getter
-     * @return x length
+     *  The getter of the length.
+     * @return The length of the prism.
      */
 	@Override
 	public Float x() {
@@ -100,8 +100,8 @@ public class GeometryCalculator extends Geometry {
     }
 
     /**
-     * x setter
-     * @param x length
+     * The setter of the length.
+     * @param x The length of the prism
      */
 	@Override
 	public void x(Float x) {
@@ -109,8 +109,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * y getter
-     * @return y length
+     * The getter of the width.
+     * @return The width of the prism.
      */
 	@Override
 	public Float y() {
@@ -118,8 +118,8 @@ public class GeometryCalculator extends Geometry {
     }
 
     /**
-     * y setter
-     * @param y width
+     * The setter of the width.
+     * @param y The width of the prism
      */
 	@Override
 	public void y(Float y) {
@@ -127,8 +127,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * z getter
-     * @return z height
+     * The getter of the height.
+     * @return The height of the prism.
      */
 	@Override
 	public Float z() {
@@ -136,8 +136,8 @@ public class GeometryCalculator extends Geometry {
     }
 
     /**
-     * z setter
-     * @param z height
+     * The setter of the height.
+     * @param z The height of the prism.
      */
 	@Override
 	public void z(Float z) {
@@ -145,8 +145,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * r getter
-     * @return r radius
+     * The getter of the radius.
+     * @return The radius of the circle.
      */
 	@Override
 	public Float r() {
@@ -154,8 +154,8 @@ public class GeometryCalculator extends Geometry {
     }
 
     /**
-     * r setter
-     * @param r radius
+     * The setter of the radius
+     * @param r The radius of the circle.
      */
 	@Override
 	public void r(Float r) {
@@ -163,8 +163,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the area
-     * @return area of a rectangle
+     * This method finds the area of a rectangle.
+     * @return The area of a rectangle.
      */
 	@Override
 	public Float area() {
@@ -173,8 +173,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the perimeter
-     * @return perimeter of a rectangle
+     * This method finds the perimeter of a rectangle.
+     * @return The perimeter of a rectangle.
      */
 	@Override
 	public Float perimeter() {
@@ -185,8 +185,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the volume
-     * @return volume of a rectangular prism
+     * This method finds the volume of a rectangular prism.
+     * @return The volume of a rectangular prism.
      */
 	@Override
 	public Float volume() {
@@ -195,8 +195,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the circumference
-     * @return circumference of a circle
+     * This method finds the circumference of a circle.
+     * @return The circumference of a circle.
      */
 	@Override
 	public Float circumference() {
@@ -204,8 +204,8 @@ public class GeometryCalculator extends Geometry {
 		return 2 * PI * this.r;
 	}
     /**
-     * finds the diameter
-     * @return diameter of a circle
+     * This method finds the diameter of a circle.
+     * @return The diameter of a circle.
      */
 	@Override
 	public Float diameter() {
@@ -214,8 +214,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the area of a circle
-     * @return area of circle
+     * This method finds the area of a circle.
+     * @return The area of a circle.
      */
 	@Override
 	public Float cArea() {
@@ -232,8 +232,8 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * finds the volume of a sphere
-     * @return volume of sphere
+     * This method finds the volume of a sphere.
+     * @return The volume of a sphere.
      */
 	@Override
 	public Float cVolume() {
@@ -254,8 +254,9 @@ public class GeometryCalculator extends Geometry {
 	}
 
     /**
-     * redefines the toString for GeometryCalculator objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
 	@Override
 	public String toString() {

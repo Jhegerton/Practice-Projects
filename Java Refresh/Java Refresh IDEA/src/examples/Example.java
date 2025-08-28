@@ -1,13 +1,12 @@
 /// @author Harrison Egerton
-/// this package is for examples of classes
+/// @package For example objects and methods.
 package examples;
 import objects.GeometryCalculator;
 import objects.Person;
 import utilities.UtilityFunctions;
 
 /**
- * this class describes example methods
- * using the singleton pattern
+ * This class describes example methods.
  */
 public class Example {
 
@@ -16,16 +15,15 @@ public class Example {
             UtilityFunctions.getInstance();
 
     /**
-     * private constructor
+     * Singleton patterns require private constructors.
      */
     private Example() {
         super();
     }
 
     /**
-     * singleton instantiation
-     * only one instance allowed
-     * @return Example instance object
+     * The singleton pattern's instantiation method.
+     * @return The same instance of the class each time.
      */
     public static Example getInstance() {
         // check if instance exists
@@ -38,7 +36,7 @@ public class Example {
     }
 
     /**
-     * executes the example of the Person class
+     * This method executes an example of the Person class.
      */
     public void personExample() {
         var person1 = new Person(
@@ -74,7 +72,7 @@ public class Example {
     }
 
     /**
-     * executes the example of the Geometry Calculator class
+     * This method executes the example of the geometry calculator class.
      */
     public void geometryExample() {
         var calc1 = new GeometryCalculator(
@@ -117,8 +115,9 @@ public class Example {
     }
 
     /**
-     * redefines the toString for Example objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
 	public String toString() {
 		return String.format(

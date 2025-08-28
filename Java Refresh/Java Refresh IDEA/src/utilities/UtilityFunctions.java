@@ -1,5 +1,5 @@
 /// @author Harrison Egerton
-/// package for utility classes
+/// @package For utility classes and methods.
 package utilities;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,25 +9,24 @@ import errors.PrintException;
 
 
 /**
- * This class describes useful functions
+ * This class describes useful functions for the whole project.
  */
 
 public class UtilityFunctions {
 	
 	private static UtilityFunctions instance;
-	
-	/**
-	 * private constructor
-	 */
+
+    /**
+     * Singleton patterns require private constructors.
+     */
 	private UtilityFunctions() {
         super();
     }
-	
-	/**
-	 * singleton instantiation
-     * only one instance allowed
-	 * @return instance
-	 */
+
+    /**
+     * The singleton pattern's instantiation method.
+     * @return The same instance of the class each time.
+     */
 	public static UtilityFunctions getInstance() {
 		if(UtilityFunctions.instance == null){
 			UtilityFunctions.instance = new UtilityFunctions();
@@ -36,9 +35,9 @@ public class UtilityFunctions {
 	}
 	
 	/**
-	 * converts an array of any type to an array of strings
-	 * @param objs array of generic objects
-	 * @return string array of all objects
+	 * This method converts an array of any type to an array of strings.
+	 * @param objs An array of generic objects.
+	 * @return A string array of all objects in the original object array.
 	 */
 	public String[] convertAllToStrings(Object[] objs) {
 		// define a temporary list to hold Strings
@@ -56,11 +55,12 @@ public class UtilityFunctions {
 	// Recursive Functions
 	
 	/**
-	 * prints out any number of objects passed
-	 * @param newlines flag for printing in new-line (true) vs inline (false)
-	 * @param objs array of generic objects
-     * @param tries count of conversion attempts
-     * @throws PrintException error from too many attempts to convert
+	 * This method prints out any number of objects passed to it.
+	 * @param newlines The boolean flag for printing in new-line (true)
+     *                    vs inline (false).
+	 * @param objs An array of generic objects.
+     * @param tries The count of conversion attempts.
+     * @throws PrintException The error from too many attempts to convert the objects to strings.
 	 */
 	public void printAllRecursive(
             boolean newlines,
@@ -113,10 +113,10 @@ public class UtilityFunctions {
 	}
 
     /**
-     * prints out an object (inline)
-     * @param obj a generic object
-     * @param tries count of conversion attempts
-     * @throws PrintException error from too many attempts to convert
+     * Prints out an object in inline format.
+     * @param obj A generic object.
+     * @param tries The count of conversion attempts.
+     * @throws PrintException The error from too many attempts to convert the object to a string.
      */
 	public void printRecursive(
             Object obj,
@@ -148,9 +148,9 @@ public class UtilityFunctions {
 
     /**
      * prints out an object (new-line)
-     * @param obj a generic object
-     * @param tries count of conversion attempts
-     * @throws PrintException error from too many attempts to convert
+     * @param obj A generic object.
+     * @param tries The count of conversion attempts.
+     * @throws PrintException The error from too many attempts to convert the object to a string.
      */
 	public void printlnRecursive(
             Object obj,
@@ -182,9 +182,9 @@ public class UtilityFunctions {
 	// Wrapper Functions
 	
 	/**
-	 * printAllRecursive wrapper function
-	 * @param newlines flag for new-line (true) vs inline (false)
-	 * @param objs array of generic objects
+	 * The wrapper function for the print all recursive function.
+	 * @param newlines The boolean flag for new-line (true) vs inline (false) formatting.
+	 * @param objs The array of generic objects.
 	 */
 	public void printAll(
             boolean newlines,
@@ -204,9 +204,9 @@ public class UtilityFunctions {
 	}
 	
 	/**
-	 * printRecursive wrapper function
-	 * @param obj a generic object
-	 */
+	 * The wrapper function for the print function in inline format.
+	 * @param obj A generic object.
+     */
 	public void print(Object obj) {
 		try {	
 		printRecursive(
@@ -220,8 +220,8 @@ public class UtilityFunctions {
 	}
 	
 	/**
-	 * printlnRecursive wrapper function
-	 * @param obj a generic object
+	 * The wrapper function for the print function in new-line format.
+	 * @param obj A generic object.
 	 */
 	public void println(Object obj) {
 		try {	
@@ -236,9 +236,9 @@ public class UtilityFunctions {
 	}
 
     /**
-     * extracts the class name from an object as a String
-     * @param obj a generic object
-     * @return String of the class name of object
+     * This method extracts the class name from an object.
+     * @param obj A generic object.
+     * @return The string of the class name of the object.
      */
 	public String findMyClass(Object obj) {
 		return obj.getClass(). // git class data
@@ -248,8 +248,9 @@ public class UtilityFunctions {
 	}
 
     /**
-     * redefines the toString for UtilityFunctions objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
 	@Override
 	public String toString() {

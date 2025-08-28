@@ -1,5 +1,5 @@
 /// @author Harrison Egerton
-/// this package is for normal classes
+/// @package For standard classes with public constructors.
 package objects;
 
 import errors.DivideByZeroException;
@@ -7,7 +7,7 @@ import utilities.MathUtil;
 import utilities.UtilityFunctions;
 
 /**
- * this class describes a fraction object
+ * This class describes a fraction object.
  */
 public class Fraction {
 
@@ -22,16 +22,16 @@ public class Fraction {
     private Integer denom; // denominator
 
     /**
-     * default constructor
+     * The default constructor.
      */
     public Fraction(){
         super();
     }
 
     /**
-     * alternate constructor
-     * @param numerator numerator of fraction
-     * @param denominator denominator of fraction
+     * The alternate constructor.
+     * @param numerator The numerator of the fraction.
+     * @param denominator The denominator of the fraction.
      */
     public Fraction(
             int numerator,
@@ -54,30 +54,30 @@ public class Fraction {
     }
 
     /**
-     * numer getter
-     * @return numer numerator of fraction
+     * The getter for the numerator
+     * @return The numerator of the fraction.
      */
     public int numer(){
         return this.numer;
     }
 
     /**
-     * numer setter
-     * @param numer numerator of fraction
+     * The setter for the numerator.
+     * @param numer The number to set for the numerator.
      */
     public void numer(int numer){
         this.numer  = numer;}
 
     /**
-     * denom getter
-     * @return denom denominator of fraction
+     * The getter for the denominator
+     * @return The denominator of the fraction.
      */
     public int denom(){
         return this.denom;}
 
     /**
-     * denom setter
-     * @param denom denominator of fraction
+     * The setter for the denoinator
+     * @param denom The number to set for the denominator.
      */
     public void denom(int denom){
         try {
@@ -94,8 +94,8 @@ public class Fraction {
     }
 
     /**
-     * returns the rational form of the fraction
-     * @return rational the decimal form
+     * This method finds the rational equivalent of the fraction.
+     * @return The fraction in decimal form.
      */
     public double toRational(){
         return
@@ -105,9 +105,9 @@ public class Fraction {
     }
 
     /**
-     * addition method for two fractions
-     * @param fract fraction to add to self
-     * @return newFraction new fraction of sum
+     * This method adds two fractions.
+     * @param fract The fraction to add to this fraction object.
+     * @return The sum in fraction form.
      */
    public Fraction add(
            Fraction fract
@@ -128,9 +128,9 @@ public class Fraction {
    }
 
     /**
-     * substraction method for two fractions
-     * @param fract fraction to subtract from self
-     * @return newFraction new fraction of the difference
+     * The method subtracts two fractions.
+     * @param fract  The fraction to subtract from this fraction object.
+     * @return The difference in fraction form.
      */
     public Fraction subtract(
             Fraction fract
@@ -149,9 +149,9 @@ public class Fraction {
     }
 
     /**
-     * multiplication method for two fractions
-     * @param fract fraction to multiply from self
-     * @return newFraction new fraction of the product
+     * This method multiplies two fractions.
+     * @param fract The fraction to multiply with this fraction object.
+     * @return The product in fraction form.
      */
     public Fraction multiply(
             Fraction fract
@@ -167,9 +167,9 @@ public class Fraction {
         return newFraction;
     }
     /**
-     * division method for two fractions
-     * @param fract fraction to divide by with self
-     * @return newFraction new fraction of the quotient
+     * This method divides two fractions.
+     * @param fract The fraction this fraction object will divide by.
+     * @return The quotient in fraction form.
      */
    public Fraction divide(Fraction fract){
        int newDenom = this.denom * fract.numer;
@@ -184,7 +184,7 @@ public class Fraction {
    }
 
     /**
-     * simplifies a Fraction object in place
+     * This method simplifies a fraction object in place.
      */
    public void simplify() {
        // finds greatest common factor
@@ -199,8 +199,9 @@ public class Fraction {
    }
 
     /**
-     * redefines the toString for Fractions objects
-     * @return String version of self
+     * This method redefines the string representation
+     * of the class instance.
+     * @return A custom string version of the instance.
      */
    @Override
    public String toString(){
