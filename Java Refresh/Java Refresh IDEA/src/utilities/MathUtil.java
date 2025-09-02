@@ -1,6 +1,7 @@
 package utilities;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -89,32 +90,26 @@ public class MathUtil {
      * @return The greatest common factor for both numbers.
      */
     public int getGCF(int num1, int num2){
-        Set<Integer> num1Factors =
-                Set.of(
-                        primeFactor(num1)
-                ); // get prime factors of num1
-        Set<Integer> num2Factors =
-                Set.of(
-                        primeFactor(num2)
-                ); // get prime factors of num2
+        List<Integer> l1 = new ArrayList<>(List.of(primeFactor(num1)));
+        List<Integer> l2 = new ArrayList<>(List.of(primeFactor(num2)));
+        List<Integer> sharedFactors = new ArrayList<>();
 
-        Set<Integer> sharedFactors = // creates a list of shared factors
-                num1Factors
-                .stream()
-                .filter(
-                        num2Factors::contains
-                ) // filter num1Factors for num2Factors
-                .collect(
-                        // collect factors into a new set
-                        Collectors.toSet()
-                );
+        for(var i=0; i<l1.size(); i++){
+            for (Integer innerPrime : l2) {
+                var p1 = l1.get(i);
+                if (p1.equals(innerPrime)) {
+                    sharedFactors.add(p1);
+                    l1.remove(i);
+                    break;
+                }
+            }
+        }
 
-        int  gcf = 1;
-        for(int factor : sharedFactors){
+        var gcf = 1;
+        for (int factor : sharedFactors) {
             gcf *= factor;
-        } // multiply all common factors to find the greatest common factor
-        return gcf; // return greatest common factor
-
+        }
+        return gcf;
     }
 
     /**
