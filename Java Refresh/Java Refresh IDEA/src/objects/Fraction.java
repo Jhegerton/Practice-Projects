@@ -27,6 +27,15 @@ public class Fraction {
     }
 
     /**
+     * This is the copy constructor.
+     * @param frac The fraction to make an identical object.
+     */
+    public Fraction(Fraction frac){
+        this.numer = frac.numer;
+        this.denom = frac.denom;
+    }
+
+    /**
      * The alternate constructor.
      * @param numerator The numerator of the fraction.
      * @param denominator The denominator of the fraction.
@@ -194,6 +203,20 @@ public class Fraction {
        // this is always a clean integer division
        this.numer /= gcf;
        this.denom /= gcf;
+   }
+
+    /**
+     * This method tests for deep equals
+     * @param fraction a fraction to test for equality.
+     * @return Whether the fraction are equal.
+     */
+   public boolean equals(Fraction fraction){
+       var tempFraction1 = new Fraction(this);
+       var tempFraction2 = new Fraction(fraction);
+       tempFraction1.simplify();
+       tempFraction2.simplify();
+       return tempFraction1.numer == tempFraction2.numer() &&
+               tempFraction1.denom == tempFraction2.denom();
    }
 
     /**
