@@ -3,31 +3,46 @@ __export__ = ['MathUtils']
 
 from math import ceil, sqrt # unpack math functions
 
-class MathUtils:
+class MathUtils: # Singleton class
     """
     MathUtils class contains methods to help with math operations
     """
     _instance: 'MathUtils' = None
 
     def __new__(cls) -> 'MathUtils':
-        if cls._instance is None:
+        """
+        Create a new instance of the class only if it doesn't already exist
+        """
+        if cls._instance is None: # If it doesn't exist create a new instance
             cls._instance =  super().__new__(cls)
-        return cls._instance
+        return cls._instance # Always returns the same instance
 
     @staticmethod
     def is_prime(number) -> bool:
+        """
+        Returns true if the number is prime or not
+        @param number: The number to check if it is prime or not
+        @return: True if the number is prime, False otherwise
+        """
         # Determine a range of possible divisors
         min_val = 2
         max_val = ceil(sqrt(number)) + 1
         total_range = range(min_val, max_val)
 
         for num in total_range:
+            # Check if the number is divisible by any of the possible divisors
             if number % num == 0:
-                return False
-        return True
+                return False # If divisible by any divisor, it's not prime
+        else:
+            return True # If no divisors were found, then it's a prime number
 
     @classmethod
     def get_prime_factors(cls, number_to_factor) -> list[int]:
+        """
+        Returns a list of prime factors of the given number
+        @param number_to_factor: The number to factor into prime factors
+        @return: A list of prime factors
+        """
         factors : list = [] # List to store prime factors
         # Determine a range of possible divisors
         min_val : int = 2
@@ -40,6 +55,7 @@ class MathUtils:
             for num in total_range:
                 if number_to_factor % num == 0:
                     # Divide and Conquer method to find prime factors
+                    # Treat like factor tree
                     factors.extend(cls.get_prime_factors(num))
                     factors.extend(cls.get_prime_factors(number_to_factor // num))
                     # Return once we have found all factors
@@ -48,12 +64,19 @@ class MathUtils:
         return [number_to_factor]
 
     def __repr__(self) -> str:
-        # Return a standard representation of the object
+        """
+        Get a standard representation of the object
+        @return: A string representation of the object
+        """
         return f"<<class=MathUtils, id={id(self)}>>"
 
 
-def main(): # Main function
-    """Main function"""
+def main(args: list[str]=None) -> None: # Main function
+    """
+    Main function
+    @params: args - list of command line arguments
+    @return: None
+    """
     u1 = MathUtils()
 
     # Test for singleton equality
