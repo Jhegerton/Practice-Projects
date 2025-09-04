@@ -2,6 +2,8 @@ __author__ = ['Harrison Egerton']
 __export__ = ['MathUtils']
 
 from math import ceil, sqrt # unpack math functions
+from typing import Generator
+
 
 class MathUtils: # Singleton class
     """
@@ -63,6 +65,14 @@ class MathUtils: # Singleton class
         # If number is prime, return it as a list of itself
         return [number_to_factor]
 
+    @classmethod
+    def get_next_prime_gen(cls, number:int, stop:int=None) -> Generator[int]:
+        while True if stop is None else (number < stop):
+            number += 1
+            if cls.is_prime(number):
+                yield number
+
+
     def __repr__(self) -> str:
         """
         Get a standard representation of the object
@@ -71,18 +81,15 @@ class MathUtils: # Singleton class
         return f"<<class=MathUtils, id={id(self)}>>"
 
 
-def main(args: list[str]=None) -> None: # Main function
+
+
+
+
+def main():
     """
-    Main function
-    @params: args - list of command line arguments
-    @return: None
+    Main function for testing math utils
     """
     u1 = MathUtils()
-
-    # Test for singleton equality
-    # u1 and u2 and u3 should be the same object
-
-    print(u1.get_prime_factors(24))  # Example usage
 
 if __name__ == "__main__":
     main()
