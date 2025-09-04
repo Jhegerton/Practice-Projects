@@ -1,13 +1,17 @@
 __author__  = ["Harrison Egerton", "Grok AI"]
 __exports__ = ["first_example", "test_diff_epochs"]
 
+# Unpacks imports from the keras library
 from keras import Input, Model, datasets
 from keras.layers import Flatten, Dense, Dropout
 
 def first_example(epoch_count=5) -> tuple[float, float]:
+    """
+    This is the first example of a simple model using Keras.
+    """
     # Load and preprocess MNIST dataset
-    mnist = datasets.mnist
-    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    mnist = datasets.mnist #
+    (x_train, y_train), (x_test, y_test) = mnist.load_data() # Load data
     x_train, x_test = x_train / 255.0, x_test / 255.0  # Normalize
 
     # Define model using Functional API with Input(shape)
@@ -21,6 +25,7 @@ def first_example(epoch_count=5) -> tuple[float, float]:
     model: Model = Model(inputs=inputs, outputs=outputs)
 
     # Compile
+    # Use sparse_categorical_crossentropy for multi-class classification
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
@@ -31,12 +36,15 @@ def first_example(epoch_count=5) -> tuple[float, float]:
     # Evaluate
     res: tuple[float, float] = model.evaluate(x_test, y_test)
 
-    print(res)
+    print(res) #
 
     return res
 
 
 def test_diff_epochs() -> None:
+    """
+    Test different number of epochs
+    """
     # Execute the trainings and store as dictionary
     attempts : dict[str, float] = {
         "1": first_example(epoch_count=1)[1],
