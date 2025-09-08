@@ -1,14 +1,16 @@
 __author__ = ["Harrison Egerton"]
 __export__ = ["WeightCalc"]
 
-from os import linesep as newline
+from os import linesep as new_line
 
 class WeightCalc:
     """
     class for calculating bmi
     """
+    # instance for singleton
     __instance: 'WeightCalc' = None
 
+    @classmethod
     def __new__(cls):
         if not cls.__instance: # if there isn't an instance of this class yet, create one
             cls.__instance = super().__new__(cls)
@@ -25,9 +27,9 @@ class WeightCalc:
                 return "underweight!"
             case _ if bmi < 24.9:
                 return "normal weight."
-            case _ if bmi < 30:
+            case _ if bmi < 30.0:
                 return "overweight."
-            case _ if bmi < 40:
+            case _ if bmi < 40.0:
                 return "obese!"
             case _:
                 return "morbidly obese!"
@@ -60,8 +62,8 @@ class WeightCalc:
         while True:
             try:
                 choice = int(input(
-                    f"What unit of measurement do you want to use? {newline}"
-                    f"1. Metric{newline}2. Imperial{newline}: "
+                    f"What unit of measurement do you want to use? {new_line}"
+                    f"1. Metric{new_line}2. Imperial{new_line}: "
                 ))
                 if choice == 1:
                     return cls._get_my_bmi_m()

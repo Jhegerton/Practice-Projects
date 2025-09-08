@@ -67,7 +67,12 @@ class MathUtils: # Singleton class
 
     @classmethod
     def get_next_prime_gen(cls, number:int, stop:int=None) -> Generator[int]:
-        while True if stop is None else (number < stop):
+        """
+        A generator to get next prime number
+        @yield: The next prime number
+        """
+        has_next: bool = True if stop is None else (number < stop)
+        while has_next: # While there is a next prime number to find
             number += 1
             if cls.is_prime(number):
                 yield number
