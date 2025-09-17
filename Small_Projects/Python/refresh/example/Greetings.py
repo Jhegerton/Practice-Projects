@@ -24,7 +24,7 @@ def greet(): # making a menu with dictionaries
         ).title()
         try:
             print(f"{greetings[language][0]} {name}.")
-            hobby = input("What is your favorite hobby? ")
+            hobby = input(f"What is your favorite hobby?{new_line}: ")
             print(f"I love {hobby.lower()} too!")
             print(f"{greetings[language][1]} {name}.")
             valid_language = True
