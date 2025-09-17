@@ -13,7 +13,7 @@ class Fraction:
         """
         self._numer = numer
         self._denom = denom
-        self.simplify()
+        self.simplify() # Make sure that the fraction is simplified
 
     def __setattr__(self, name: str, value: any) -> None:
         """
