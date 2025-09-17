@@ -7,20 +7,22 @@ class Fraction:
     """
     A class to represent a fraction
     """
-    def __init__(self, numer: int, denom: int) -> None:
+    def __init__(self, numer: int | None=None, denom: int | None =None) -> None:
         """
         Initialise a fraction with the given numerator and denominator
         """
         self._numer = numer
         self._denom = denom
-        self.simplify() # Make sure that the fraction is simplified
+        if None not in self.__dict__.values():
+            self.simplify() # Make sure that the fraction is simplified
 
     def __setattr__(self, name: str, value: any) -> None:
         """
         Restrict the attributes that can be set
         """
-        if name not in {"_numer","_denom"}:
+        if name not in "_numer _denom":
             raise AttributeError("Only a numerator and denominator can be assigned")
+        super().__setattr__(name, value)
 
     @property
     def numer(self) -> int:
@@ -62,6 +64,10 @@ class Fraction:
         Simplify the fraction in place
         :return: The fraction itself
         """
+        if None in self.__dict__.values():
+            raise ValueError(
+                "Fraction cannot be simplified because it has missing values."
+            )
         gcd: int = math.gcd(self._numer, self._denom)
         self._numer //= gcd
         self._denom //= gcd
@@ -134,7 +140,7 @@ class Fraction:
         Return a string representation of the fraction
         """
         return (f"<<Fraction, id={id(self)}> "
-                f"{' '.join(f'{key}={value}' for key, value in self.__dict__.items())}>")
+                f"{', '.join(f'{key}={value}' for key, value in self.__dict__.items())}>")
 
     def __str__(self) -> str:
         """
