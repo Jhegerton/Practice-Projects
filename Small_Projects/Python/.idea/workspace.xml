@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="029c424c-f7f7-4921-9463-ce3fdd7c9eb2" name="Changes" comment="Added fraction tests." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jhegerton&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jhegerton/Practice-Projects.git&quot;,
+    &quot;accountId&quot;: &quot;a199d452-8c40-4851-9493-36bf9a7d5ebe&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="329XLWv0zvmoZ5t59ylWcuTOQ3l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for FractionTest.TestMyFraction.test_int_error.executor": "Run",
+    "Python tests.Python tests for FractionTest.TestMyFraction.test_repr.executor": "Run",
+    "Python tests.Python tests for FractionTest.TestMyFraction.test_simplify.executor": "Run",
+    "Python tests.Python tests in FractionTest.py.executor": "Run",
+    "Python.AI_check.executor": "Run",
+    "Python.Main (1).executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.MathUtils.executor": "Run",
+    "Python.hello.executor": "Run",
+    "Python.tmp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "python1",
+    "last_opened_file_path": "/Users/atlas/Git/Practice-Projects/Small_Projects/Python",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/refresh" />
+      <recent name="$PROJECT_DIR$/refresh/util" />
+      <recent name="$PROJECT_DIR$/ai" />
+      <recent name="$PROJECT_DIR$/ai/examples" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/refresh/root" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/refresh/root/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for refresh.test.test_fraction.TestMyFraction.test_int_error" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/refresh/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;refresh.test.test_fraction.TestMyFraction.test_int_error&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for refresh.test.test_fraction.TestMyFraction.test_repr" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/refresh/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;refresh.test.test_fraction.TestMyFraction.test_repr&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for refresh.test.test_fraction.TestMyFraction.test_simplify" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/refresh/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;refresh.test.test_fraction.TestMyFraction.test_simplify&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_fraction.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/refresh/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/refresh/test/test_fraction.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_fraction.py" />
+        <item itemvalue="Python tests.Python tests for refresh.test.test_fraction.TestMyFraction.test_repr" />
+        <item itemvalue="Python tests.Python tests for refresh.test.test_fraction.TestMyFraction.test_int_error" />
+        <item itemvalue="Python tests.Python tests for refresh.test.test_fraction.TestMyFraction.test_simplify" />
+        <item itemvalue="Python.Main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-f78a9d071105-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26574.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="029c424c-f7f7-4921-9463-ce3fdd7c9eb2" name="Changes" comment="" />
+      <created>1756833705493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756833705493</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Made some changes to the math util files (python)">
+      <option name="closed" value="true" />
+      <created>1756909303901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756909303901</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added tensorflow example.">
+      <option name="closed" value="true" />
+      <created>1756909759799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756909759799</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Made the example easier to read using import unpacking">
+      <option name="closed" value="true" />
+      <created>1756914645158</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756914645158</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created a 3.11 environment">
+      <option name="closed" value="true" />
+      <created>1756914798885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756914798885</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added typing and python was updated">
+      <option name="closed" value="true" />
+      <created>1756919705667</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756919705667</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added files from deleted branch and added necessary values to .gitignore">
+      <option name="closed" value="true" />
+      <created>1756920243124</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756920243124</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated math utils">
+      <option name="closed" value="true" />
+      <created>1756940820230</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756940820230</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made minor changes to math utils.">
+      <option name="closed" value="true" />
+      <created>1756941311316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756941311316</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Made the get_prime_factors self contained, removed external method call.">
+      <option name="closed" value="true" />
+      <created>1756987006871</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756987006871</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added doc comments.">
+      <option name="closed" value="true" />
+      <created>1756987792770</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756987792770</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added some comments cleaned main.">
+      <option name="closed" value="true" />
+      <created>1757016383693</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757016383693</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created some more python code to refresh knowledge.">
+      <option name="closed" value="true" />
+      <created>1757025691449</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757025691449</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added comments removed assertion call.">
+      <option name="closed" value="true" />
+      <created>1757343008143</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757343008143</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added Fraction class.">
+      <option name="closed" value="true" />
+      <created>1758121609947</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1758121609947</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated comments on Fraction class">
+      <option name="closed" value="true" />
+      <created>1758121967463</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1758121967463</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added fraction tests.">
+      <option name="closed" value="true" />
+      <created>1758140903102</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1758140903102</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Made some changes to the math util files (python)" />
+    <MESSAGE value="Added tensorflow example." />
+    <MESSAGE value="Made the example easier to read using import unpacking" />
+    <MESSAGE value="Created a 3.11 environment" />
+    <MESSAGE value="Added typing and python was updated" />
+    <MESSAGE value="Added files from deleted branch and added necessary values to .gitignore" />
+    <MESSAGE value="Updated math utils" />
+    <MESSAGE value="Made minor changes to math utils." />
+    <MESSAGE value="Made the get_prime_factors self contained, removed external method call." />
+    <MESSAGE value="Added doc comments." />
+    <MESSAGE value="Added some comments cleaned main." />
+    <MESSAGE value="Created some more python code to refresh knowledge." />
+    <MESSAGE value="Added comments removed assertion call." />
+    <MESSAGE value="Added Fraction class." />
+    <MESSAGE value="Updated comments on Fraction class" />
+    <MESSAGE value="Added fraction tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fraction tests." />
+  </component>
+</project>
