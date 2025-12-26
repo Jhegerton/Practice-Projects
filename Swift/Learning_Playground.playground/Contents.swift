@@ -1,0 +1,3 @@
+import Cocoa
+
+greetWithName()
