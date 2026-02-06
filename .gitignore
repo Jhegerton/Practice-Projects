@@ -1,0 +1,7 @@
+# Mac OS #
+.DS_Store
+
+# IDE Config Folders #
+.vscode
+.idea
+.eclipse

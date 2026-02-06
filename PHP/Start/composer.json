@@ -1,0 +1,17 @@
+{
+    "name": "atlas/start",
+    "description": "This is an starting package for learning php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "~/Git/Practice-Projects/PHP/Start/": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jhegerton",
+            "email": "90717856+Jhegerton@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
